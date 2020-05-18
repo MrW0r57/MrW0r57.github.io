@@ -22,10 +22,8 @@ description: Infosec Blogs
 navbar-links:
   About Me: "aboutme"
   BLOGS:
-    - WAPT: "http://deanattali.com/beautiful-jekyll/"
-    - PWP: "http://www.markdowntutorial.com/"
-    - RE&MA: "http://www.markdowntutorial.com/"
-    - ExpDev: "http://www.markdowntutorial.com/"
+    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
+    - Learn markdown: "http://www.markdowntutorial.com/"
   Author's home: "http://deanattali.com"
 
 # Image to show in the navigation bar - image must be a square (width = height)
@@ -63,14 +61,15 @@ footer-link-col: "#404040"
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
   name: Lakshay Sharma
+
 # Select your active Social Network Links.
 # Uncomment the links you want to show in the footer and add your information to each link.
 # You can reorder the items to define the link order.
 # If you want to add a new link that isn't here, you'll need to also edit the file _data/SocialNetworks.yml
 social-network-links:
- # rss: true
+  rss: true
   email: "mrw0r57@protonmail.com"
-  facebook: https://fb.com/mrw0r57
+  facebook: MrW0r57
   github: MrW0r57
   twitter: https://twitter.com/LakshayPandit3?s=08
 #  reddit: yourname
@@ -78,7 +77,7 @@ social-network-links:
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
-   instagram: 0xl4k
+#  instagram: deanat78
 #  youtube: user/deanat78
 #  spotify: yourname
 #  telephone: +14159998888
