@@ -18,7 +18,7 @@ I have learned from the community, this is the least i can do to help my fellows
 
 ### Connect me
 
-You can connect me on following platforms such as Twitter, LinkedIn, Facebook, etc.:
+You can connect me on following platforms such as Twitter, LinkedIn, Instagram, etc.:
 
 > * _Twitter [@MrW0r57](https://twitter.com/lakshaypandit3)_
 > * _LinkedIn [Lakshay Sharma](https://linkedin.com/in/lakshay-sharma-6a796a189)_
