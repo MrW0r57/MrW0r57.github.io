@@ -1,16 +1,25 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: Here is a brief introduction of mine
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+My name is Lakshay Sharma. I am a self taught **Ethical Hacker** with following skills:
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+> - Web and Network Penetration Testing.
+> - Reversing Malware and Exploit Writing.
 
-What else do you need?
+### About me
 
-### my history
+I am a penetration tester and security enthusiast who always been curious to learn hacking in his early age, i love to share my knowledge with others and this make my concepts clear and give me a dedication.
+I created this blog to share my knowledge to beginners and enthusiast's so they can learn what i know as its a great thing.
+I have learned from the community, this is the least i can do to help my fellows.
+> I'm planning to give a lot more to the community in future.
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+### Connect me
+
+You can connect me on following platforms such as Twitter, LinkedIn, Facebook, etc.:
+
+> * _Twitter [@MrW0r57](twitter.com/lakshaypandit3)_
+> * _LinkedIn [Lakshay Sharma](linkedin.com/in/lakshay-sharma-6a796a189)_
+> * _Instagram [@0xl4k](instagram.com/0xl4k)_
