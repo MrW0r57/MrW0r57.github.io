@@ -1,7 +1,7 @@
 # --- General options --- #
 
 # Name of website
-title:  MrW0r57
+title: MrW0r57
 
 # Short description of your site
 description: Infosec Blogs
@@ -21,13 +21,10 @@ description: Infosec Blogs
 # List of links in the navigation bar
 navbar-links:
   About Me: "aboutme"
-  Subjects:
-    - WebPentesting: "google.com/webpentesting"
-    - PentestingWithParrot(PWP): "google.com"
-    - ReversingAndMalwareanalysis: "google.com"
-    - ExploitWriting: "google.com"
-    - Blogspot: "mrw0r57.blogspot.com"
-  Blogspot: "mrw0r57"
+  BLOGS:
+    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
+    - Learn markdown: "http://www.markdowntutorial.com/"
+  Author's home: "http://deanattali.com"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
@@ -63,7 +60,7 @@ footer-link-col: "#404040"
 # Change all these values or delete the ones you don't want.
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
-  name: Lakshay Sharma
+  name: Some Person
 
 # Select your active Social Network Links.
 # Uncomment the links you want to show in the footer and add your information to each link.
@@ -72,15 +69,15 @@ author:
 social-network-links:
   rss: true
   email: "mrw0r57@protonmail.com"
-  facebook: "https://facebook.com/Mrw0r57"
-  github: "github.com/MrW0r57"
-  twitter: "https://twitter.com/LakshayPandit3?s=08"
+  facebook:
+  github: MrW0r57
+  twitter: https://twitter.com/LakshayPandit3?s=08
 #  reddit: yourname
-  linkedin: "https://www.linkedin.com/in/lakshay-sharma-6a79a189"
+  linkedin: https://www.linkedin.com/in/lakshay-sharma-6a79a189
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
- instagram: "instagram.com/0xl4k"
+#  instagram: deanat78
 #  youtube: user/deanat78
 #  spotify: yourname
 #  telephone: +14159998888
@@ -159,7 +156,7 @@ date_format: "%B %-d, %Y"
 # --- Don't need to touch anything below here (but you can if you want) --- #
 
 # Output options (more information on Jekyll's site)
-timezone: " Asia/Kolkata"
+timezone: "America/Vancouver"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
