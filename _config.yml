@@ -22,8 +22,13 @@ description: Infosec Blogs
 navbar-links:
   About Me: "aboutme"
   Pentesting:
-    - WebPentesting: "http://deanattali.com/beautiful-jekyll/"
-    - Pentesting With Parrot(PWP): "http://www.markdowntutorial.com/"
+    - Web Pentesting: ""
+    - Pentesting With Parrot(PWP): ""
+    - Red Teaming: ""
+  Binary:
+    - Reverse Engineering: ""
+    - Offensive Malware: ""
+    - Exploit Writing: ""
   Blogspot: "http://lakshaymw.blogspot.com"
 
 # Image to show in the navigation bar - image must be a square (width = height)
