@@ -11,7 +11,7 @@ My name is Lakshay Sharma. I am a self taught **Ethical Hacker** with following 
 
 ### About me
 
-I am a penetration tester and security enthusiast who always been curious to learn hacking in his early age, i love to share my knowledge with others and this help to make my conecpts better.
+I am a penetration tester and security enthusiast who always been curious to learn hacking in his early age, i love to share my knowledge with others and this help to make my concept better.
 I created this blog to share my knowledge to beginners and enthusiast's so they can learn what i know as its a great thing.
 I have learned from the community, this is the least i can do to help my fellows.
 > **I'm planning to give a lot more to the community in future.**
