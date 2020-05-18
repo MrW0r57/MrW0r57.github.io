@@ -21,10 +21,10 @@ description: Infosec Blogs
 # List of links in the navigation bar
 navbar-links:
   About Me: "aboutme"
-  BLOGS:
-    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
-    - Learn markdown: "http://www.markdowntutorial.com/"
-  Author's home: "http://deanattali.com"
+  Pentesting:
+    - WebPentesting: "http://deanattali.com/beautiful-jekyll/"
+    - Pentesting With Parrot(PWP): "http://www.markdowntutorial.com/"
+  Blogspot: "http://mrw0r57.blogspot.com"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
