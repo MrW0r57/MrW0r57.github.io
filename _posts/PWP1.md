@@ -8,7 +8,8 @@ gh-badge:
   - fork
   - follow
 tags:
-  - test
+  - PWP
+  - Beginner
 comments: true
 published: true
 ---
