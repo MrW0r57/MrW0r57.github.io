@@ -1,6 +1,6 @@
 ---
 layout: post
-title: PWP
+title: Introduction to Parrot Os
 subtitle: Each post also has a subtitle
 gh-repo: daattali/beautiful-jekyll
 gh-badge:
