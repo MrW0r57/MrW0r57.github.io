@@ -5,10 +5,14 @@ subtitle: Here is a brief introduction of mine
 ---
 
 My name is Lakshay Sharma. I am a self taught **Ethical Hacker** with following skills and interests:
+
 Skils:
+
 > - _Web and Network Penetration Testing._
 > - _Reversing Malware and Exploit Writing._
+
 Interests:
+
 > - _Malware Development._
 > - _Mobile Pentesting._
 > - _Red Teaming._
