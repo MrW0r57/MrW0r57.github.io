@@ -8,8 +8,8 @@ My name is Lakshay Sharma. I am a self taught **Ethical Hacker** with following 
 
 Skils:
 
-> **- _Web and Network Penetration Testing._
-> **- _Reversing Malware and Exploit Writing._
+> - _Web and Network Penetration Testing._
+> - _Reversing Malware and Exploit Writing._
 
 Interests:
 
