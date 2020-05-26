@@ -7,7 +7,7 @@ title: Parrot OS Basics 1.2
 
 ## Introduction
 
-In this blog post we will learn how to manage services and programs in parrot os.
+In this blog post we will learn how to manage services and programs in Parrot OS.
 
 ## Linux Services
 
@@ -73,5 +73,7 @@ or
 ~~~
 # service [service_name] disable
 ~~~
-_**This is the high level overview to system services and how to manage them..
-**_
+
+## Conclusion
+
+_**This is the high level overview to system services and how to manage them..**_
