@@ -1,7 +1,12 @@
 ---
 layout: post
-published: false
+published: true
 title: Windows Basics 3.2
+tags:
+  - PWP
+  - Beginner
+  - Windows Basics
+comments: true
 ---
 ## Windows System and Networking commands
 
