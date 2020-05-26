@@ -1,7 +1,12 @@
 ---
 layout: post
-published: false
+published: true
 title: Parrot OS Basics 1.1
+tags:
+  - PWP
+  - Beginner
+  - Parrot OS Basics
+comments: true
 ---
 ## File System and Basic Commands
 n this blog post you will learn linux file system and basic commands, 
