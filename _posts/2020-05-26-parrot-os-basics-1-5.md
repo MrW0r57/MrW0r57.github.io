@@ -2,6 +2,12 @@
 layout: post
 published: false
 title: Parrot OS Basics 1.5
+tags:
+  - PWP
+  - Beginner
+  - Parrot OS Basics
+comments: true
+
 ---
 ## Some Tricks and Tips
 
