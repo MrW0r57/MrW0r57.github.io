@@ -8,6 +8,8 @@ tags:
   - Parrot OS Basics
 comments: true
 ---
+# File System and basic commands
+
 ## Introduction
 In this blog post you will learn linux file system and basic commands, 
 it will be good if you learn them practically on your system.
