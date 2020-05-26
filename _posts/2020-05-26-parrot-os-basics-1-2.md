@@ -2,6 +2,11 @@
 layout: post
 published: false
 title: Parrot OS Basics 1.2
+tags:
+  - PWP
+  - Beginner
+  - Parrot OS Basics
+comments: true
 ---
 # Managing services in parrot
 
