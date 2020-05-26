@@ -1,7 +1,12 @@
 ---
 layout: post
-published: false
-title: 'Information gathering with parrot 5,2'
+published: true
+title: Information gathering with parrot 5.2
+tags:
+  - PWP
+  - Beginner
+  - Information gathering
+comments: true
 ---
 ## Active approaches of Information gathering 
 
