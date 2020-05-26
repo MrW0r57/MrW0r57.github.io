@@ -103,28 +103,29 @@ http://www.archive.org/index.php
 There are many search engines which also supports dorks and advance search engines 
 
 
-Social Media
-----------------
+## Social Media
+
 
 Social media is also a way to find information about your target, like number of employees, physical address, events, job posting, requirements, products and more.
 Facebook, linkedin, Indeed, and other jobs sites are the most useful sites to gather information passilvly.
 
-theharvestor
----------------------
+## theharvestor
 
-Its a passive info gathering tools for linux which gather information about specific target.
+**Its a passive info gathering tools for linux which gather information about specific target.**
 
 Basic usage: 
+~~~
 # theharvester -d netflix.com -l 200 -b google, linkedin, facebook
+~~~
 
-
-
+~~~
 -d: for domain.
 -b: for data source.
 -l: limit result.
+~~~
 
-SHODAN
-----------------
+## SHODAN
+
 https://shodan.io
 
 Shodan is the world's first search engine for Internet-connected devices. Use Shodan to discover which of your devices are connected to the Internet, where they are located and who is using them. Websites are just one part of the Internet.
@@ -133,8 +134,8 @@ we can search for webcam, open ports, specific ip, specific web on shodan using 
 
 Download defcon document for shodan to know more, (click here)[https://www.defcon.org/images/defcon-18/dc-18-presentations/Schearer/DEFCON-18-Schearer-SHODAN.pdf]
 
-censys
----------------
+## censys
+
 https://censys.io
 Censys scans the most ports and houses the biggest certificate database in the world, to provide the freshest and most thorough view of your assets; both known and unknown.
 
