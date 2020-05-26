@@ -1,7 +1,13 @@
 ---
 layout: post
-published: false
+published: true
 title: Windows Basics 3.1
+tags:
+  - PWP
+  - Beginner
+  - Windows Basics
+comments: true
+
 ---
 ## Windows directory, Registry and basic commands
 
