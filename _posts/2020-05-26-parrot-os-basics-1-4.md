@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Parrot OS basics 1.4
 tags:
   - PWP
