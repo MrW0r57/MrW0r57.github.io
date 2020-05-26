@@ -1,7 +1,13 @@
 ---
 layout: post
-published: false
+published: true
 title: Information gathering with parrot 5.3
+tags:
+  - PWP
+  - Beginner
+  - Information gathering
+comments: true
+
 ---
 ## Recon in hardway
 
@@ -70,7 +76,7 @@ This will run default and safe scripts together.
 
 T**o run a particular script**
 
-# nmap --script="http-waf-detect" targetip
+ nmap --script="http-waf-detect" targetip
 
 
 **You can run any script using this technique, check /usr/share/nmap/scripts folder  to get more idea about scripts.**
