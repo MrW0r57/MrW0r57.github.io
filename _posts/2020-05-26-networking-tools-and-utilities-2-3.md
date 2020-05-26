@@ -79,4 +79,4 @@ To inspect the intercepted packets **click on view -> connections**, and you're 
 
 ## Conclusion 
 
-_**There are many mitm tools you can check them in your Parrot OS. **_
+_**There are many mitm tools you can check them in your Parrot OS.**_
