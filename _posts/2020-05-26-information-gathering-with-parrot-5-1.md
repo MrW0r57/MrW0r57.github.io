@@ -51,22 +51,27 @@ Name:	google.com
 Address: 2404:6800:4002:804::200e
 ~~~
 **we have also another tool called dig**
+dig is a flexible tool for interrogating DNS name servers. It performs DNS lookups and displays the answers
 
+that are returned from the name server(s) that were queried.
 ~~~
 $ dig -h
 
 $ dig google.com
 ~~~
-We will now use search engines as our info gathering tool.
+**We will now use search engines as our info gathering tool.**
 
-Google is a powerful search engine, which provide advance search options and its dorks like below.
+## Google
 
-intitle: Use if you want to search for a specific title over the web.( intitle: indexof mp4)
-inurl: Use if you want to search a specific term in url over the web. (inurl: login.php)
-site: Use if you want specific website as a search result.(site: virustotal.com)
-filetype: Use it to search all document with specific extension (filetype:docx)
-link: It will display website that have link to specific websites.(link:facebook.com)
-cache: It will show the cached content of website. (cache:virustotal.com)
+**Google is a powerful search engine, which provide advance search options and its dorks like below.
+**
+
+- intitle: Use if you want to search for a specific title over the web.( intitle: indexof mp4)
+- inurl: Use if you want to search a specific term in url over the web. (inurl: login.php)
+- site: Use if you want specific website as a search result.(site: virustotal.com)
+- filetype: Use it to search all document with specific extension (filetype:docx)
+- link: It will display website that have link to specific websites.(link:facebook.com)
+- cache: It will show the cached content of website. (cache:virustotal.com)
 
 lets see their usage total, as its old school trick to passive info gathering
 
