@@ -1,7 +1,12 @@
 ---
 layout: post
-published: false
+published: true
 title: Networking tools and utilities 2.1
+tags:
+  - PWP
+  - Beginner
+  - Networking tools and utilities
+comments: true
 ---
 ## Usage of Telnet,Netcat,Socat,Cryptcat,SSH,SCP
 
