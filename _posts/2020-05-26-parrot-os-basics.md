@@ -1,7 +1,7 @@
 ---
 layout: post
 published: false
-title: Parrot OS Basics
+title: Parrot OS Basics 1.1
 ---
 ## File System and Basic Commands
 n this blog post you will learn linux file system and basic commands, 
