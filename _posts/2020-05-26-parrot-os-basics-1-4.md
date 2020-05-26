@@ -93,9 +93,9 @@ or
 $printenv USER
 ~~~
 To set variable 
-~~~
-$ export PATH="$HOME/bin:$PATH"
-~~~
+
+$ export PATH="$HOME/bin:$PATH/"
+
 ## Conclusion
 
 _**Try yourself and check the value of variables.**_
