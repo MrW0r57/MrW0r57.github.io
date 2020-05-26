@@ -139,6 +139,10 @@ Download defcon document for shodan to know more, (click here)[https://www.defco
 https://censys.io
 Censys scans the most ports and houses the biggest certificate database in the world, to provide the freshest and most thorough view of your assets; both known and unknown.
 
+## Conclusion
+
+Use these approaches, to gather information about your target.
+
 
 
 
