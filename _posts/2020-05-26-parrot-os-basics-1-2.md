@@ -15,9 +15,11 @@ Basically linux services are the program which runs in background outside the in
 Services also known as daemons in linux systems. example - sshd, httpd (d is for daemon).
 
 We have to switch user to root to use sytemctl and service command (check the usage using 'man systemctl', 'man service'.
+
 ``
 $ su ( to switch user to root)
 ``
+
 Now list all the services using command below
 ~~~
  # systemctl list-unit-files --type service --all
