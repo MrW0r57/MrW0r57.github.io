@@ -76,4 +76,5 @@ T**o run a particular script**
 **You can run any script using this technique, check /usr/share/nmap/scripts folder  to get more idea about scripts.**
 
 
-conclusion
+## Conclusion
+Nmap NSE is powerful tool, if learn how to use this, then you will be able to discover, enumerate, exploit a target easily.
