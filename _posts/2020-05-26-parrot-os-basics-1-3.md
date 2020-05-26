@@ -2,6 +2,12 @@
 layout: post
 published: false
 title: Parrot OS basics 1.3
+tags:
+  - PWP
+  - Beginner
+  - Parrot OS Basics
+comments: true
+
 ---
 ## Basic linux operations 
 
