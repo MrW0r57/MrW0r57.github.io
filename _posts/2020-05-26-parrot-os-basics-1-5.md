@@ -149,7 +149,7 @@ Print the lines which matches with the pattern.
 
 $ awk '/hacker/
 
-> /hactivist/' badactors.txt
+\> /hactivist/' badactors.txt
 
 
 **Initialization and Final Action**
@@ -160,11 +160,11 @@ Awk has two important patterns which are specified by the keyword called BEGIN a
 $ awk 'BEGIN {print
 "Name\tcrime\tplace\tmoney";}
 
-> {print $2,"\t",$3,"\t",$4,"\t",$NF;}
+\> {print $2,"\t",$3,"\t",$4,"\t",$NF;}
 
-> END{print "Report Generated\n--------------";
+\> END{print "Report Generated\n--------------";
 
-> }' badactors.txt
+\> }' badactors.txt
 
 **wget and curl commands**
 
@@ -191,7 +191,7 @@ Commands with a single bracket overwrite the destination’s existing contents.
 
 Overwrite
 
- > - standard output
+ \> - standard output
 
  < - standard input
 
@@ -201,7 +201,7 @@ Commands with a double bracket do not overwrite the destination’s existing con
 
 Append
 
-  >> - standard output
+  \>> - standard output
 
   << - standard input
 
@@ -233,5 +233,3 @@ $ ls /home/desktop | grep user.txt               // it will send first command i
 ## Conclusion
 
 These are very useful command tricks of linux, use them.
-
-
