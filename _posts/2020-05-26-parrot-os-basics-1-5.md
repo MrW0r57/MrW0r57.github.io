@@ -134,43 +134,50 @@ diff - compare files line by line and report the difference
 ~~~
 $ diff [options] file1 file2
 ~~~
-awk command
+**awk command**
 
 Awk is a programming language which allows easy manipulation of structured data and the generation of formatted reports.
  
- Basic Syntax
+ **Basic Syntax**
  
 $ awk '/search pattern1/ {Actions}
+
 /search pattern2/ {Actions}' file
 
 
 Print the lines which matches with the pattern.
 
 $ awk '/hacker/
+
 > /hactivist/' badactors.txt
 
 
-Initialization and Final Action
+**Initialization and Final Action**
+
 Awk has two important patterns which are specified by the keyword called BEGIN and END.
 
 
 $ awk 'BEGIN {print
 "Name\tcrime\tplace\tmoney";}
+
 > {print $2,"\t",$3,"\t",$4,"\t",$NF;}
+
 > END{print "Report Generated\n--------------";
+
 > }' badactors.txt
 
-wget and curl commands
-----------------------------------
+**wget and curl commands**
+
 you can download files using wget and curl from internet
 
 example
 
-$ wget https://github.io/tools.git
-# curl https://github.io/tools.git
+$ wget https://github.io/uname/tools.git
 
-I/O Redirection
---------------------------------------
+$ curl https://github.io/uname/tools.git
+
+**I/O Redirection**
+
 
 Input and output in the Linux environment is distributed across three streams
 
@@ -184,31 +191,32 @@ Commands with a single bracket overwrite the destination’s existing contents.
 
 Overwrite
 
-    > - standard output
+ > - standard output
 
-    < - standard input
+ < - standard input
 
-    2> - standard error
+ 2> - standard error
 
 Commands with a double bracket do not overwrite the destination’s existing contents.
 
 Append
 
-    >> - standard output
+  >> - standard output
 
-    << - standard input
+  << - standard input
 
-    2>> - standard error
+  2>> - standard error
 
 PIPE '|'
+
 Pipes are used to redirect a stream from one program to another
 
 example
 
-$ ls /home/desktop | grep user.txt               // it will send first command input to second and display the result
+$ ls /home/desktop | grep user.txt               // it will send first command input to second and display the result.
 
 
-filters used by pipe
+**filters used by pipe**
 
 
 
@@ -222,6 +230,7 @@ filters used by pipe
 
     wc - wc counts characters, lines, and words.
 
+## Conclusion
 
 These are very useful command tricks of linux, use them.
 
