@@ -23,7 +23,7 @@ navbar-links:
   About Me: "aboutme"
   Pentesting:
     - Web Pentesting: ""
-    - Pentesting With Parrot(PWP): ""
+    - Pentesting With Parrot(PWP): "https://mrw0r57.github.io/tags/#PWP"
     - Red Teaming: ""
   Binary:
     - Reverse Engineering: ""
