@@ -2,6 +2,12 @@
 layout: post
 published: false
 title: Parrot OS basics 1.4
+tags:
+  - PWP
+  - Beginner
+  - Parrot OS Basics
+comments: true
+
 ---
 ## Environmental variable in bash
 
