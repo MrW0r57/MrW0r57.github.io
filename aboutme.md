@@ -26,9 +26,11 @@ I have learned from the community, this is the least i can do to help my fellows
 > **I'm planning to give a lot more to the community in future.**
 
 ### Connect me
+
 <html>
 <script src="https://www.hackthebox.eu/badge/137513"></script>
 </html>
+
 You can connect me on following platforms such as Twitter, LinkedIn, Instagram, etc.:
 
 > * _Twitter [@MrW0r57](https://twitter.com/lakshaypandit3)_
