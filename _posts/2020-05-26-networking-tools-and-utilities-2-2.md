@@ -1,7 +1,12 @@
 ---
 layout: post
-published: false
+published: true
 title: Networking tools and utilities 2.2
+tags:
+  - PWP
+  - Beginner
+  - Networking tools and utilities
+comments: true
 ---
 ## Usage of wireshark,tcpdump,tshark
 
