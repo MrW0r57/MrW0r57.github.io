@@ -1,7 +1,13 @@
 ---
 layout: post
-published: false
+published: true
 title: Information gathering with parrot 5.1
+tags:
+  - PWP
+  - Beginner
+  - Information gathering
+comments: true
+
 ---
 ## Passive approaches to Information Gathering
 
