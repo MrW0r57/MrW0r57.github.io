@@ -27,7 +27,7 @@ I have learned from the community, this is the least i can do to help my fellows
 
 ### Connect me
 
-[ [! [MrW0r57](http://www.hackthebox.eu/badge/image/137513)](https://www.hackthebox.eu/home/users/profile/137513) 
+[![MrW0r57](http://www.hackthebox.eu/badge/image/137513)](https://www.hackthebox.eu/home/users/profile/137513) 
 
 You can connect me on following platforms such as Twitter, LinkedIn, Instagram, etc.:
 
