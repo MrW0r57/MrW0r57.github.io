@@ -152,7 +152,7 @@ chmod 600 hacker.sh
 Try it !!!
 
 
-There are many more, have a look and read manual using 'man' command on terminal.
-And if you want a tool to help you simple use -h flag or --help, example ping -h.
+**_There are many more, have a look and read manual using 'man' command on terminal.
+And if you want a tool to help you simple use -h or --help, example ping -h._**
 
 
