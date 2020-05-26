@@ -117,5 +117,5 @@ $ export PATH="$HOME/bin:$PATH/"
 
 ## Conclusion
 
-_**Try yourself and check the value of variables.**_
+_**Try yourself and check the value of variables using echo.**_
 
