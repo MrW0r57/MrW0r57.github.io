@@ -1,7 +1,12 @@
 ---
 layout: post
-published: false
-title: Enumeration Is The Key To Success 6.1
+published: true
+title: Enumeration is the key to sucess 6.1
+tags:
+  - PWP
+  - Intermediate
+  - Enumeration
+comments: true
 ---
 ## Linux Approaches
 
