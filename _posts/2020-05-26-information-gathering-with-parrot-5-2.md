@@ -10,8 +10,8 @@ comments: true
 ---
 ## Active approaches of Information gathering 
 
-**It requires direct engagement with target system through scanning ports, protocols and services to learn more about target system.
-It helps us to know about what services is running on target system which help us to know weaknesses in target system.**
+**It requires direct engagement with target system through scanning ports, protocols and services to learn more about the target system.
+It helps us to know about what services are running on the target system which helps us to know weaknesses in the target system.**
 
 
 **Read this document before moving ahead**
