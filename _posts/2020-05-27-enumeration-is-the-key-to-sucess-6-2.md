@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: Enumeration is the key to sucess 6.2
+title: Enumeration is the key to success 6.2
 tags:
   - PWP
   - Intermediate
@@ -21,7 +21,7 @@ _**In this blog post we will learn windows enumeration approaches, tools to use 
 ## NetBIOS Enumeration
 
 
-NetBIOS basically allows an application on different computer systems to communicate with one another in a local area network.
+NetBIOS allows an application on different computer systems to communicate with one another in a local area network.
 It allows a computer to share printers and files, remote procedure calls, exchange messages, etc.
 This may reveal much information than we expected.
 
@@ -183,11 +183,11 @@ To enumerate users
   
 this will tell you all users on the target network
 
-**There are many more rpcclient commands used to interact with target.**
+**There are many more rpcclient commands used to interact with the target.**
 
 ``
-enumalsgroups , srvinfo , lookupnames ,
-queryuser , enumprivs .
+enumalsgroups , srvinfo , lookupnames,
+queryuser, enumprivs .
 ``
 
 
@@ -195,7 +195,7 @@ queryuser , enumprivs .
 
 
 SNMP Stands for Simple Network Management Protocol and it is used for exchanging management information between network devices.
-You can even use SNMP to configure router and check its status.
+You can even use SNMP to configure the router and check its status.
 
 
 **nmap scripts for snmp enumeration**
@@ -228,7 +228,7 @@ You can even use SNMP to configure router and check its status.
   snmp-win32-users.nse
 ```
 
-**usage :**
+**usage:**
 
 ~~~
  # nmap -A -p <TargetIP> 
@@ -264,7 +264,7 @@ snmpcheck -t <TargetIP> -c public
   
 **snmpwalk**
 
-snmpwalk is an SNMP application that  uses  SNMP  GETNEXT  requests  to query a network entity for a tree of information.
+snmpwalk is an SNMP application that uses  SNMP  GETNEXT  requests to query a network entity for a tree of information.
   
   
   
@@ -285,4 +285,4 @@ snmpwalk is an SNMP application that  uses  SNMP  GETNEXT  requests  to query a 
   
 ## Conclusion
 
-_**There may be many other tools for this purpose, but I have covered useful tools. I recommend please check their manual using 'man toolname' command to know all functionalities of these tools.**_
+_**There may be many other tools for this purpose, but I have covered useful tools. I recommend please check their manual using 'man tool name' command to know all functionalities of these tools.**_
