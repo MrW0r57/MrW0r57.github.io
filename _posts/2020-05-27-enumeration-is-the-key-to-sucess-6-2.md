@@ -26,6 +26,8 @@ It allows a computer to share printers and files, remote procedure calls, exchan
 This may reveal much information than we expected.
 
 
+
+
 **There are some NetBIOS suffix's that you must know before interacting with NetBIOS**
 
 Open the link and read about them [click here](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-brws/0c773bdd-78e2-4d8b-8b3d-b7506849847b?redirectedfrom=MSDN)
@@ -35,6 +37,8 @@ Open the link and read about them [click here](https://docs.microsoft.com/en-us/
 
 
 nbtscan is a tool used to scan networks for NetBIOS name information.
+
+
 
 **usage:**
 
@@ -93,6 +97,7 @@ smbmap -h <TargetIP> to get more detailed information
 
 
 Let's interact with IPC$
+  
 
 
 # smbclient \\\\<targetIP>\\IPC$ -U 
@@ -101,6 +106,7 @@ Let's interact with IPC$
 
 we can use username also with '-U '<Username>' '
   
+
 
 **you can guess username from website**
   
@@ -120,8 +126,11 @@ or you can use your windows to interact with smb shares
 C:\> net use \\<TargetIP>\IPC$ "" /u:""
 
 
+  
+  
 **You can also use multiple tools to enumerate NetBIOS**
 
+  
 enum4linux
 
 
@@ -131,32 +140,38 @@ enum4linux -a <TargetIP>
 Wininfo
 
 
-# winfo <targetIP> -n
+winfo <targetIP> -n
 
 
--n tells the tool to establish a null session before trying to dump the information.
+**-n** tells the tool to establish a null session before trying to dump the information.
 
 There are other windows gui based tool to enumerated dumpsec, you can install it to use
 
+  
+  
+  
 **rpcclient**
 
+  
 
 rpcclient  :rpcclient is a utility initially developed to test MS-RPC functionality in SMB itself.
 
 
-# rpcclient -N -U "" <targetIP>
+  rpcclient -N -U "" <targetIP>
 
 
 -N - Not asking for password
 -U - set username (""for none)
 
 
-After connecting
+**After connecting**
 
 
 rpcclient $> enum
 
 
+  
+  
 you will get multiple commands to execute.
 
 To enumerate users 
@@ -167,7 +182,7 @@ rpcclient $> enumdomusers
   
 this will tell you all users on the target network
 
-There are many more rpcclient commands used to interact with target.
+**There are many more rpcclient commands used to interact with target.**
 
 ``
 enumalsgroups , srvinfo , lookupnames ,
@@ -221,22 +236,36 @@ ls /usr/share/nmap/scripts | grep snmp
 nmap -p161 --script snmp-info,snmp-interfaces,snmp-netstat,snmp-brute <TargetIP>
 
 
-**Another tool to enumerate**
+Another tool to enumerate
   
   
 
 **snmpcheck**
-
+  
+snmpcheck  is  a  program  that checks the SNMP status of the specified hosts
+  
+  
 **usage:**
 
 
 man snmpcheck
 
+  
 snmpcheck -t 192.168.1.X -c public
 
 
+  
+  
+  
+  
+  
 **snmpwalk**
 
+snmpwalk is an SNMP application that  uses  SNMP  GETNEXT  requests  to query a network entity for a tree of information.
+  
+  
+  
+  
 **usage:**
 
  man snmpwalk
