@@ -9,19 +9,19 @@ tags:
 comments: true
 
 ---
-## Basic linux operations 
+## Basic Linux operations 
 
-In this blog post we are going to perform some basic operations in our Parrot OS.
+In this blog post, we are going to perform some basic operations in our Parrot OS.
 
-**What is process?**
+**What is the process?**
 
-Process is basically refers to a program in execution.
+The process is referred to as a program in execution.
 
-_**There are two types of process in linux:**_
+_**There are two types of process in Linux:**_
 
-**Foreground processes** : These are controlled by user directly through a terminal session. 
+**Foreground processes**: These are controlled by the user directly through a terminal session. 
 
-**Background processes** : They are controlled by system, they don't expect any user input.
+**Background processes**: They are controlled by the system, they don't expect any user input.
 
 **Daemons**
 
@@ -50,11 +50,11 @@ To check background process
 ~~~
 To send a running process to the background use [ctrl + z].
 
-To send a background process to foreground
+To send a background process to the foreground
 ~~~
 # fg [job id]
 ~~~
-To check active linux processes
+To check active Linux processes
 ~~~
 # ps -aux
 ~~~
@@ -76,7 +76,7 @@ There are multiple signals to send a process.
 
 # kill [signal id] [pid]  (send a signal to process)
 ~~~
-To kill a application processes using its name
+To kill an application process using its name
 
 ~~~
 # killall [program name]
