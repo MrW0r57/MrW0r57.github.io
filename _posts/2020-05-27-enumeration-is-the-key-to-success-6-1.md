@@ -74,7 +74,7 @@ Enumeration is the process to get more detailed information about target service
 _**To scan verbose, syn, all ports, all scripts, no ping**_
 
 ~~~
-nmap -vv -A -sC -sS -T 4 -p- targetIP -Pn
+nmap -vv -A -sC -sS -T 4 -p- <targetIP> -Pn
 ~~~
 
 _**To scan verbose, syn, udp, version, deny DNS rsolution**_
