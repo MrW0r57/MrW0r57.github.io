@@ -8,29 +8,29 @@ tags:
   - Networking tools and utilities
 comments: true
 ---
-## Usage of wireshark,tcpdump,tshark
+## Usage of Wireshark,tcpdump,tshark
 
 ## Introduction
 
-_**In this blog post we will wireshark, tcpdump, tshark and their high level usage.**_
+_**In this blog post we will Wireshark, tcpdump, tshark, and their high-level usage.**_
 
 ## Sniffing
 
-Sniffing is the process of capturing and monitoring network packets transmission over a network connection.
+Sniffing is the process of capturing and monitoring network packets transmitted over a network connection.
 We can perform sniffing using tools like wireshark, tshark, tcpdump, etc.
 
 ## Spoofing
 
-Spoofing is type of attack when an individual is able to modify packets between the transmission of two or more users.
+Spoofing is a type of attack when an individual can modify packets between the transmission of two or more users.
 Its an attacker's approach to gain unauthorized access to a user's system or information by pretending to be the user.
 
 
 ## Wireshark
 
 
-Wireshark is network analysis tool which lets you interactively browse packet data from a live network or from a previously saved capture file
+Wireshark is a network analysis tool which lets you interactively browse packet data from a live network or a previously saved capture file
 
-Parrot has inbuilt wireshark installed, you can run it using terminal
+Parrot has inbuilt Wireshark installed, you can run it using terminal
 ~~~
 # wireshark -h
  
@@ -38,21 +38,21 @@ Parrot has inbuilt wireshark installed, you can run it using terminal
 ~~~
 1. Select interface, example if we are using wifi then select wlan0
 
-2. Right click wlan0 and start capture
+2. Right-click wlan0 and start capture
 
-3. And your are able to capture every packet on your device.
+3. And you can capture every packet on your device.
 
 
 **Applying filters**
 
 1. select interface. ex-eth0.
 
-2. Enter http in filter box and start capture.
+2. Enter http in the filter box and start the capture.
 
 3. You're able to capture every single http packet
 
 
-We can also capture auth packets depending n the authentication mechanism implemented on the target web application, we will have to apply specificfilters in order to get only the meaningful packets
+We can also capture auth packets depending n the authentication mechanism implemented on the target web application, we will have to apply specific filters to get only the meaningful packets
 
 let's assume web app is using http citrix authentication 
 
@@ -60,7 +60,7 @@ let's assume web app is using http citrix authentication
 
 2. Enter http.authcitrix and start capture
 
-3. And we can inspect every packet based on mechanism to get credentials.
+3. And we can inspect every packet based on the mechanism to get credentials.
 
 **We can also analyse captured packets**
 ~~~
@@ -68,14 +68,14 @@ let's assume web app is using http citrix authentication
 ~~~
 ## TSHARK
 
-Its a command-line flavour of wireshark with same functionalities.
+It's a command-line flavor of Wireshark with the same functionalities.
 TShark is used to analyze real-time network traffic and it can read .pcap files to analyze the information, dig into the details of those connections
 
 ~~~
 # tshark -h
 ~~~
 
-lets capture wlan packets
+let's capture wlan packets
 
 ~~~
 # tshark -i wlan0
@@ -99,7 +99,7 @@ We can also decode packets in various output formats using -T flag.
 # tshark -r captured -T text
 # tshark -r captured -T tabs
 ~~~
-we can redirect their output in file using '>'.
+we can redirect their output in a file using '>'.
 
 # tshark -r captured -T json > file.json
 
@@ -108,7 +108,7 @@ we can redirect their output in file using '>'.
 **To capture HTTP packets on wlan0 **
 
 ~~~
-# tshark -i wlan0 -Y http
+# tshark -I wlan0 -Y http
 ~~~
 
 **To capture TCP packets on eth0**
@@ -120,11 +120,11 @@ we can redirect their output in file using '>'.
 ## TCPDUMP
 
 
-Tcpdump is a powerful packet sniffer that runs via command line.
-Tcpdump  prints  out a description of the contents of packets on a net‐work interface that match the boolean expression
+Tcpdump is a powerful packet sniffer that runs via the command line.
+Tcpdump  prints  out a description of the contents of packets on a network interface that matches the boolean expression
 
 
-open terminal Let's use it..
+open terminal Let's use it.
 
 ~~~
 # tshark -h
@@ -148,6 +148,6 @@ suppose we want to capture packets only for a specific destination like 8.8.8.8
 
 ## Conclusion
 
-_**Check manual to appply more filters, you can use wireshark,tshark,tcpdump  with nmap to trace nmap packets also, try it to know the working of every flag in nmap.**_
+_**Check manual to apply more filters, you can use wireshark, tshark, tcpdump with nmap to trace nmap packets also, try it to know the working of every flag in nmap.**_
 
 
