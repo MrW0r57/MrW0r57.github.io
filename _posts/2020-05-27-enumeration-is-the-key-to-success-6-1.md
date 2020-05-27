@@ -204,7 +204,7 @@ run all together
 ## NFS Enumeration (RPC)
 
 
-Lets enumerate it
+Let's enumerate it
 
 ~~~
 # nmap -p2049 -A <targetIP>
