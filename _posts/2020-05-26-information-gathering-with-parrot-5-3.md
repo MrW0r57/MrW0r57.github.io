@@ -13,18 +13,18 @@ comments: true
 
 ## Introduction
 
-**In this blog post we will learn strong recon techniques to find sensitive information about target network, we will connect target network , to gather more deep information about target.**
+**In this blog post we will learn strong recon techniques to find sensitive information about the target network, we will connect targthe et network, to Nmap more deep information about the target.**
 
 ## Nmap NSE
 
 The Nmap Scripting Engine (NSE) is one of Nmap's most powerful and flexible features. It allows users to write (and share) simple scripts using the Lua programming language to automate a wide variety of networking tasks. Those scripts are executed in parallel with the speed and efficiency you expect from Nmap. Users can rely on the growing and diverse set of scripts distributed with Nmap, or write their own to meet custom needs.
 
-**Nmap scripting engine is a library of nmap that enchance your network scan. You can achievee everything in scanning from nse.**
+**Nmap scripting engine is a library of nmap that enhance your network scan. You can achieve everything in scanning from use.**
 
-There are more than 600 scripts which helps you to run defined scan against target, you can run scripts easily to scan and enumerate 
-target assets, discover vulnerabilities amd exploit them in using NSE.
+There are more than 600 scripts which helps you to run a defined scan against a target, you can run scripts easily to scan and enumerate 
+target assets, discover vulnerabilities and exploit them in using NSE.
 
-Let's have look to these scripts.
+Let's have lololookedse scripts.
 
 ~~~
 # ls /usr/share/nmap/scripts
