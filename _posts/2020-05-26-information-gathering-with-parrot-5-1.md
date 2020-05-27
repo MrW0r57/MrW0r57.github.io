@@ -11,13 +11,13 @@ comments: true
 ---
 ## Passive approaches to Information Gathering
 
-_**Passive info gathering is the OSINT(open source intelligence) approach to know about target.
-In passive info gathering we gather information from open source resources like social media network, target partners, their web presense, their infrastructure, financial information and many more.**_
+_**Passive info gathering is the OSINT(open-source intelligence) approach to know about the target.
+In passive info gathering, we gather information from open-source resources like social media network, target partners, their web presence, their infrastructure, financial information and many more.**_
 
 **While performing passive info gathering we need to keep information well organised you can use cherry tree or dradis like tools.**
 
 
-**Whois lookup:** Whois provide public database infrastructure-related information. 
+**Whois lookup:** Whois provides public database infrastructure-related information. 
 
 usage:
 ~~~
@@ -40,7 +40,7 @@ Domain Name: AMAZON.COM
 ## Dnslookup
 
 
-**We can use ns lookup for dns enumeration of target host**
+**We can use ns lookup for DNS enumeration of target host**
 
 **Nslookup is a program to query Internet domain name servers.**
 ~~~
@@ -56,7 +56,7 @@ Address: 172.217.166.238
 Name:	google.com
 Address: 2404:6800:4002:804::200e
 ~~~
-**we have also another tool called dig**
+**We have also another tool called dig**
 dig is a flexible tool for interrogating DNS name servers. It performs DNS lookups and displays the answers
 
 that are returned from the name server(s) that were queried.
@@ -65,21 +65,21 @@ $ dig -h
 
 $ dig google.com
 ~~~
-**We will now use search engines as our info gathering tool.**
+**We will now use search engines as our info-gathering tool.**
 
 ## Google
 
-**Google is a powerful search engine, which provide advance search options and its dorks like below.
+**Google is a powerful search engine, which provides advance search options and its dorks like below.
 **
 
 - intitle: Use if you want to search for a specific title over the web.( intitle: indexof mp4)
 - inurl: Use if you want to search a specific term in url over the web. (inurl: login.php)
-- site: Use if you want specific website as a search result.(site: virustotal.com)
+- site: Use if you want a specific website as a search result. (site: virustotal.com)
 - filetype: Use it to search all document with specific extension (filetype:docx)
-- link: It will display website that have link to specific websites.(link:facebook.com)
-- cache: It will show the cached content of website. (cache:virustotal.com)
+- link: It will display a website that have a link to specific websites. (link:facebook.com)
+- cache: It will show the cached content of the website. (cache:virustotal.com)
 
-lets see their usage total, as its old school trick to passive info gathering
+let's see their usage total, as its old school trick to passive info gathering
 
 search following strings on google.
 
@@ -92,7 +92,7 @@ To get all subdomains about a specific website:
 site:.amazon.com
 
 
-you can make your own as per your requiremnt
+you can make your own as per your requirement
 
 To know more about advance search and dorks;
 
@@ -101,7 +101,7 @@ http://pdf.textfiles.com/security/googlehackers.pdf
 https://www.exploit-db.com/google-hacking-database/
 
 
-Using wayback machine we can also find archieved/deleted data of website:
+Using wayback machine we can also find archived/deleted data of website:
 just open url below and search website or you can also use dorks 
 http://www.archive.org/index.php
 
@@ -112,12 +112,12 @@ There are many search engines which also supports dorks and advance search engin
 ## Social Media
 
 
-Social media is also a way to find information about your target, like number of employees, physical address, events, job posting, requirements, products and more.
-Facebook, linkedin, Indeed, and other jobs sites are the most useful sites to gather information passilvly.
+Social media is also a way to find information about your target, like a number of employees, physical address, events, job posting, requirements, products and more.
+Facebook, Linkedin, Indeed, and other jobs sites are the most useful sites to gather information passively.
 
 ## theharvestor
 
-**Its a passive info gathering tools for linux which gather information about specific target.**
+**Its a passive info gathering tools for Linux which gather information about a specific target.**
 
 Basic usage: 
 ~~~
@@ -125,8 +125,8 @@ Basic usage:
 ~~~
 
 ~~~
--d: for domain.
--b: for data source.
+-d: for the domain.
+-b: for the data source.
 -l: limit result.
 ~~~
 
@@ -138,7 +138,7 @@ Shodan is the world's first search engine for Internet-connected devices. Use Sh
 
 we can search for webcam, open ports, specific ip, specific web on shodan using shodan dorks.
 
-Download defcon document for shodan to know more, (click here)[https://www.defcon.org/images/defcon-18/dc-18-presentations/Schearer/DEFCON-18-Schearer-SHODAN.pdf]
+Download DEFCON document for shodan to know more, (click here)[https://www.defcon.org/images/defcon-18/dc-18-presentations/Schearer/DEFCON-18-Schearer-SHODAN.pdf]
 
 ## censys
 
