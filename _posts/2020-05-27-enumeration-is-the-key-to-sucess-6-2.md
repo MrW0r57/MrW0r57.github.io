@@ -272,10 +272,11 @@ snmpwalk is an SNMP application that  uses  SNMP  GETNEXT  requests  to query a 
 **usage:**
 
 ```
- man snmpwalk
+ # man snmpwalk
 ```
+
 ```
- snmpwalk -v 2c <TargetIP> -c public
+# snmpwalk -v 2c <TargetIP> -c public
 ```
   
   
