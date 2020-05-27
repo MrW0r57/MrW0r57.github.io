@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: Enumeration is the key to sucess 6.1
+title: Enumeration is the key to success 6.1
 tags:
   - PWP
   - Intermediate
@@ -17,7 +17,7 @@ _**In this blog post we will learn some tools and techniques to enumerate target
 
 ## Enumeration
 
-Enumeration is the process to get more detailed information about target services, security misconfigurations, account names, public shares and more by connecting remotely to the target network.
+Enumeration is the process to get more detailed information about target services, security misconfigurations, account names, public shares, and more by connecting remotely to the target network.
 
 
 
@@ -25,17 +25,17 @@ Enumeration is the process to get more detailed information about target service
 
 
 
-## Services that reveals information
+## Services that reveal information
 
 
 
-- FTP  - File transfer protocol is basically a layer 7 protocol that is used to transfer file to and from server, by authenticated user.
+- FTP  - File transfer protocol is a layer 7 protocol that is used to transfer files to and from the server, by an authenticated user.
  
 - SSH - Secure shell is a remote Login Protocol used to securely log on to a computer from another computer remotely and execute commands.
  
-- Telnet - Telnet protocol is used to execute commands on network connected systems remotely.
+- Telnet - Telnet protocol is used to execute commands on network-connected systems remotely.
 
-- SMTP - Simple mail transfer protocol is email transfer protocol.
+- SMTP - Simple mail transfer protocol is an email transfer protocol.
 
 - DNS - Domain Name System resolves the names of internet sites with their underlying IP addresses.
 
@@ -45,7 +45,7 @@ Enumeration is the process to get more detailed information about target service
  
 - SQL servers - SQL Server is a relational database management system developed by Microsoft.
 
-- NFS - Network File System is a rpc based file sharing protocol found in linux systems, it used to provide access to shared resources.
+- NFS - Network File System is an RPC based file-sharing protocol found in Linux systems, it used to provide access to shared resources.
 
 - IPSec - IP security is a collection of security standards that enable computers on a TCP/IP network to encrypt and digitally sign their transmissions.
  
@@ -53,7 +53,7 @@ Enumeration is the process to get more detailed information about target service
 
 - SNMP - Simple Network Management Protocol is an Internet Standard protocol for collecting and organizing information about managed devices on IP networks and for modifying that information to change device behavior.
 
-- Samba - a Linux-based implementation of the SMB/CIFS protocols, provides print and file sharing services for windows clients within an environment.
+- Samba - a Linux-based implementation of the SMB/CIFS protocols, provides print and file-sharing services for windows clients within an environment.
 
 - SMB - SMB works through a client-server approach, where a client makes specific requests and the server responds accordingly. SMB protocol specifically deals with access to filesystems, such that clients may make requests to a file server.
 
@@ -69,7 +69,7 @@ Enumeration is the process to get more detailed information about target service
 
 
 
-**Scan the network by nmap and netdiscover to open ports and services, now we have to enumerate them.**
+**Scan the network by Nmap and Netdiscover to open ports and services, now we have to enumerate them.**
 
 _**To scan verbose, syn, all ports, all scripts, no ping**_
 
@@ -77,7 +77,7 @@ _**To scan verbose, syn, all ports, all scripts, no ping**_
 nmap -vv -A -sC -sS -T 4 -p- <targetIP> -Pn
 ~~~
 
-_**To scan verbose, syn, udp, version, deny DNS rsolution**_
+_**To scan verbose, syn, UDP, version, deny DNS rsolution**_
 
 ~~~
 # nmap -v -sS -sU -sV -n 192.168.0.1/24
@@ -88,10 +88,10 @@ _**To scan verbose, syn, udp, version, deny DNS rsolution**_
 **usage** 
 
 ~~~
-netdiscover -r targetIP_range
+netdiscover -r 192.168.0.1/24 <target ip range>
 ~~~
 
-**If port 80/443 is running, you can guess server user's from there, that you can  use login ssh, ftp etc.**
+**If port 80/443 is running, you can guess server user's from there, that you can  use login SSH, FTP, etc.**
 
   
   
@@ -101,32 +101,32 @@ netdiscover -r targetIP_range
 nmap -A -p21 <targetIP>
 ~~~
 
-**First check anonymous ftp login on server, if ftp anonymous login is enable on server then connect with command below.**
+**First check anonymous ftp login on the server, if FTP anonymous login is enabled on the server then connect with the command below.**
 
 ~~~
-  ftp targetIP
+  ftp <targetIP>
 ~~~
 
-And it will connect you to target network, you can perform any ftp operations using ftp commands, 
+And it will connect you to target network, you can perform any FTP operations using FTP commands, 
 
   
-_**To check ftp commands after connecting to the target server**_
+_**To check FTP commands after connecting to the target server**_
 
 ~~~
 # help
 ~~~
 
-it will show comands that you can use to perform actions.
+it will show commands that you can use to perform actions.
 
-**Using nmap to enumerate ftp**
+**Using Nmap to enumerate FTP**
   
-check ftp scripts in nmap
+check FTP scripts in nmap
 
 ~~~
 # ls /usr/share/nmap/scripts | grep ftp
 ~~~
 
-There are various ftp use them together enumeration scripts in nmap
+There are various FTP use them together enumeration scripts in nmap
 
 **usage:** 
 
@@ -145,15 +145,15 @@ There are various ftp use them together enumeration scripts in nmap
 nmap -A -p22 <targetIP>
 ~~~
   
-**After finding open ssh port we can enumerate it for ssh users using nmap scripts**
+**After finding open ssh port we can enumerate it for ssh users using Nmap scripts**
 
 **you can try to connect ssh**
 
 ~~~
-ssh TargetIp 22
+ssh <targetIP> 22
 ~~~
 
-**You can run below scripts in order to enumerate ssh as per you requirement.**
+**You can run below scripts to enumerate ssh as per your requirement.**
  
 ~~~
 # ls /usr/share/nmap/scripts | grep ssh
@@ -224,13 +224,13 @@ nfs-statfs.nse
 
 ~~~
 
-**To find rich result of nfs enumeration**
+**To find the rich result of nfs enumeration**
 
 ~~~
 nmap --script nfs-ls,nfs-showmount,nfs-statfs <targetIP>
 ~~~
 
-**To interact with publicaly available nfs exports, we can showmount also.**
+**To interact with publicly available nfs exports, we can showmount also.**
 
 ~~~
 showmount -e <targetIP>
@@ -238,10 +238,10 @@ showmount -e <targetIP>
 /home/server/ *
 ~~~
 
-**To mount the availaible nfs exports**
+**To mount the available nfs exports**
 
 
-**We can create a sepearte directory in our system** 
+**We can create a separate directory in our system** 
 
 ~~~
  mkdir -p /mnt/home/server
@@ -274,7 +274,7 @@ rpcinfo -p <targetIP>
 
 
   
-We can find sensitive informaion if we enumerate samba properly.
+We can find sensitive information if we enumerate samba properly.
 
 You can find Samba listening on NetBIOS ports.
 
@@ -302,12 +302,12 @@ Let's catch Samba
 # smbclient \\\\<targetIP>\\<sharename>
 ~~~
 
-**After succesfully connecting use 'help' command to list navigation commands and try to get more information from those shares.**
+**After successfully connecting use 'help' command to list navigation commands and try to get more information from those shares.**
 
 
-You can also simply your task using [enum4linux](https://github.com/portcullislabs/enum4linux) tool in seconds.
+You can also simplify your task using [enum4linux](https://github.com/portcullislabs/enum4linux) tool in seconds.
 
-**usage :**
+**usage:**
 
 ~~~
 # enum4linux -a <targetIP>
