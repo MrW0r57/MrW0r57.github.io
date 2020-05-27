@@ -11,7 +11,7 @@ comments: true
 ---
 ## Some Tricks and Tips
 
-In this blog post we will learn the tricky usage of some commands and utilities.
+In this blog post, we will learn the tricky usage of some commands and utilities.
 
 **cat command**
 
@@ -27,7 +27,7 @@ To append text in a file
 $ cat >> filename.java or filename.sh .
 
 
-To number line in output
+To number line in the output
 
 
 $ cat -n filename.txt
@@ -57,7 +57,7 @@ Now another command
 $ alias scanme='nmap -sS -p- localhost'
 
 
-Run scanme and you will nmap scan result for your system
+Run scanme and you will Nmap scan result for your system
 
 $ scanme
 
@@ -65,14 +65,14 @@ $ alias scanmehard='nmap -A -p- localhost'
 
 you can set multiple alias like this
 
-To permanently add them in to your profile, you just need to append above commands in .bashrc, like below.
+To permanently add them into your profile, you just need to append the above commands in .bashrc, like below.
 
 $ nano ~/.bashrc
 
-append above line at the end of the file and relaunch terminal.
+append the above line at the end of the file and relaunch terminal.
 
 
-Use shopt -s cdspell to autmatically correct your typos
+Use shopt -s cdspell to automatically correct your typos
 
 $ shopt -s cdspell
 $ cd /hme            
@@ -96,7 +96,7 @@ count lines match
 
 $ grep -c root /etc/passwd
 
-count lines doesn't match
+count lines don't match
 
 $ grep -cv root /etc/passwd
 
@@ -142,7 +142,7 @@ $ diff [options] file1 file2
 ~~~
 **awk command**
 
-Awk is a programming language which allows easy manipulation of structured data and the generation of formatted reports.
+Awk is a programming language that allows easy manipulation of structured data and the generation of formatted reports.
  
  **Basic Syntax**
  
@@ -160,7 +160,7 @@ $ awk '/hacker/
 
 **Initialization and Final Action**
 
-Awk has two important patterns which are specified by the keyword called BEGIN and END.
+Awk has two important patterns that are specified by the keyword called BEGIN and END.
 
 
 $ awk 'BEGIN {print
@@ -215,7 +215,7 @@ Append
 
 PIPE '|'
 
-Pipes are used to redirect a stream from one program to another
+Pipes are used to redirecting a stream from one program to another
 
 example
 
@@ -238,4 +238,4 @@ $ ls /home/desktop | grep user.txt               // it will send first command i
 
 ## Conclusion
 
-These are very useful command tricks of linux, use them.
+These are very useful command tricks of Linux, use them.
