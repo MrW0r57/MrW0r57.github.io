@@ -16,9 +16,9 @@ I am going to explain these tools with examples, these tools provide interactive
 Every tool has there different advantages, check their manual using man command for more.
 
 ## Telnet
-Telnet is a network protocol works on port 23, it provides command-line interface to communicate with another host
+Telnet is a network protocol works on port 23, it provides a command-line interface to communicate with another host
 
-Mostly it used in port testing, we can use telnet for banner grabbing, i will cover it later in this blog series.
+Mostly it used in port testing, we can use telnet for banner grabbing, I will cover it later in this blog series.
 
 To connect to host/server using telnet
 ~~~
@@ -33,7 +33,7 @@ example
 ## Netcat/nc
 
 Its most useful utility for our use, It can open TCP connections, send UDP packets, listen on arbitrary TCP and UDP ports.
-And its better than telnet for communication to another device.
+And it's better than telnet for communication with another device.
 ~~~
 # nc -h
 ~~~
@@ -58,7 +58,7 @@ try to chat with another host using terminal
 ## Cryptcat
 
 The formula behind crypcat is: cryptcat = netcat + encryption.
-Its basically a netcat variant which provide encryption over TCP/UDP communication with another host...
+It's a netcat variant that provides encryption over TCP/UDP communication with another host...
 
 
 Let's play with it..............
@@ -71,13 +71,13 @@ start cryptcat listner
 listening on [any] 1337 ...
 ~~~
 
-Ok so its listning on 1337 lets connect using another terminal or host.
+Ok, so it's listening on 1337 let's connect using another terminal or host.
 ~~~
 # cryptcat 192.168.43.209 1337
 ~~~
 Now chat with another host
 
-We can set -k perameter to make our communication password protected
+We can set -k parameter to make our communication password protected
 
 Ok let's try encrypted reverse shell using cryptcat 
 ~~~
@@ -92,26 +92,26 @@ Now connect with it using another host
 # cryptcat -k hacker 192.168.43.209 1337
 ~~~
 
-You can excute commands on another host side and 
+You can execute commands on another host site and 
 
 ## SSH and SCP
 
 SSH (Secure Shell) is a cryptographic network protocol for operating network services securely over an unsecured network. Typical applications include remote command-line, login, and remote command execution, but any network service can be secured with SSH.
-We use it moslty to provide remote access to another host securley over unencrypted network
+We use it mostly to provide remote access to another host securely over an unencrypted network
 
-SCP(Secure Copy Protocol) copies files between hosts on a network, sshs for data transfer, and uses the same authentication and provides the same security as ssh.
+SCP(Secure Copy Protocol) copies files between hosts on a network, ssh for data transfer, and uses the same authentication and provides the same security as ssh.
  
-_**To connect a ssh client with a host which is running sshd (ssh server) .**_
+_**To connect an ssh client with a host which is running sshd (ssh server) .**_
 
 ~~~
 # ssh -h
-ssh user@host (and enter password for connection)
+ssh user@host (and enter a password for connection)
 ~~~
 example:
 ~~~
 # ssh hacker@10.10.10.134
 ~~~
-and enter password, or we can include ssh password also in same line
+and enter a password, or we can include ssh password also in the same line
 
 ~~~
 # sshpass -p "hahanoob" ssh hacker@10.10.10.134
