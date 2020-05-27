@@ -7,7 +7,6 @@ tags:
   - Intermediate
   - Enumeration
 comments: true
-
 ---
 ## Windows Approaches
 
@@ -115,7 +114,7 @@ we can use username also with '-U '<Username>' '
 sudo mount.cifs //<targetIP>/C /home/share/ user=,pass=
 
 
-or you can use your windows interact with smb shares
+or you can use your windows to interact with smb shares
 
 
 C:\> net use \\<TargetIP>\IPC$ "" /u:""
@@ -185,26 +184,38 @@ You can even use SNMP to configure router and check its status.
 
 **nmap scripts for snmp enumeration**
 
-``
+
 ls /usr/share/nmap/scripts | grep snmp
-snmp-brute.nse
-snmp-hh3c-logins.nse
-snmp-info.nse
-snmp-interfaces.nse
-snmp-ios-config.nse
-snmp-netstat.nse
-snmp-processes.nse
-snmp-sysdescr.nse
-snmp-win32-services.nse
-snmp-win32-shares.nse
-snmp-win32-software.nse
-snmp-win32-users.nse
-``
+
+  snmp-brute.nse
+
+  snmp-hh3c-logins.nse
+
+  snmp-info.nse
+
+  snmp-interfaces.nse
+
+  snmp-ios-config.nse
+
+  snmp-netstat.nse
+
+  snmp-processes.nse
+
+  snmp-sysdescr.nse
+
+  snmp-win32-services.nse
+
+  snmp-win32-shares.nse
+
+  snmp-win32-software.nse
+
+  snmp-win32-users.nse
+
 
 **usage :**
 
 
-# nmap -A -p <TargetIP> 
+ nmap -A -p <TargetIP> 
 
   
 nmap -p161 --script snmp-info,snmp-interfaces,snmp-netstat,snmp-brute <TargetIP>
@@ -219,9 +230,9 @@ nmap -p161 --script snmp-info,snmp-interfaces,snmp-netstat,snmp-brute <TargetIP>
 **usage:**
 
 
- man snmpcheck
+man snmpcheck
 
- snmpcheck -t 192.168.1.X -c public
+snmpcheck -t 192.168.1.X -c public
 
 
 **snmpwalk**
@@ -240,6 +251,3 @@ nmap -p161 --script snmp-info,snmp-interfaces,snmp-netstat,snmp-brute <TargetIP>
 ## Conclusion
 
 **_There may be many other tools for this purpose, but I have covered useful tools. I recommend please check their manual using 'man <toolname>` command to know all functionalities of these tools._**
-
-
-
