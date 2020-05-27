@@ -11,13 +11,13 @@ comments: true
 # File System and basic commands
 
 ## Introduction
-In this blog post you will learn linux file system and basic commands, 
-it will be good if you learn them practically on your system.
+In this blog post, you will learn the Linux file system and basic commands, 
+it will be good if you learn them practically in your system.
 
 
 ## File System
 
-Parrot OS adheres to filesystem hierarchy standard. The Filesystem Hierarchy Standard defines the directory structure and directory contents in Linux distros. 
+Parrot OS adheres to the filesystem hierarchy standard. The Filesystem Hierarchy Standard defines the directory structure and directory contents in Linux distros. 
 
 **Parrot Directories and Description**
 
@@ -37,7 +37,7 @@ _Below are some important directories of Parrot(Linux)._
 - ~ - User default working directory.
 
 
-There are many other directories also, but i only mentioned which we use mostly.
+There are many other directories also, but I only mentioned which we use mostly.
 
 
 **Basic Commands**
@@ -105,8 +105,8 @@ _Use them one by one, read manual using 'man' command_
 
 **Terminal**
 
-- '$ : specifies, you're in user shell.'
-- '# : specifies, you're in root.'
+- '$: specifies, you're in user shell.'
+- '#: specifies, you're in root.'
 
  
 **chown command**
@@ -128,7 +128,7 @@ we can edit permissions using chmod command
 ```$ chmod permissions file
 ```
 
-There are three types of linux users
+There are three types of Linux users
 -  1. owner
 -  2. group
 -  3. world
@@ -159,5 +159,5 @@ chmod 600 hacker.sh
 Try it !!!
 
 
-**_There are many more, have a look and read manual using 'man' command on terminal.
+**_There are many more, have a look, and read manual using 'man' command on terminal.
 And if you want a tool to help you simple use -h or --help, example ping -h._**
