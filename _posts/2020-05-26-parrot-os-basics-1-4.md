@@ -11,15 +11,15 @@ comments: true
 ---
 ## Environmental variable in bash
 
-In this blog post we wil discuss linux shell and environmental variables in bash. 
+In this blog post, we will discuss Linux shell and environmental variables in bash. 
 
-## What is Linux Shell ?
+## What is Linux Shell?
 
-Shell is an environment in which we can run our commands, programs, and shell scripts. There are different flavors of a shell, just as there are different flavors of operating systems. Each flavor of shell has its own set of recognized commands and functions.
+Shell is an environment in which we can run our commands, programs, and shell scripts. There are different flavors of a shell, just as there are different flavors of operating systems. Each flavor of the shell has its own set of recognized commands and functions.
 
 **Types of shell**
 
-There are basically two types of shells in linux
+There are two types of shells in Linux
 
 1. Bourne Shell
 
@@ -28,7 +28,7 @@ There are basically two types of shells in linux
 
 **The Bourne Shell has the following subcategories −**
 
-- 	  Bourne shell (sh)
+-       Bourne shell (sh)
 
 -     Korn shell (ksh)
 
@@ -43,10 +43,10 @@ There are basically two types of shells in linux
 - TENEX/TOPS C shell (tcsh)
 
 
-In Parrot, we use bash shell usually, you can chheck it using 'echo $SHELL' command.
+In Parrot, we use bash shell usually, you can check it using 'echo $SHELL' command.
 
 
-Now we will talk about Environmental variables, how to list them ?, how set them ?
+Now we will talk about Environmental variables, how to list them? how set them?
 
 
 **Variables have the following format:**
@@ -54,7 +54,7 @@ Now we will talk about Environmental variables, how to list them ?, how set them
 
    KEY=value
    
-   KEY="Some other value"
+   KEY=" Some other value"
    
    KEY=value1:value2
 
@@ -62,19 +62,19 @@ Now we will talk about Environmental variables, how to list them ?, how set them
 **Environment variables are variables that are available system-wide and are inherited by all spawned child processes and shells.**
 
 
-Shell variables are variables that apply only to the current shell instance. Each shell such as zsh and bash, has its own set of internal shell variables.
+Shell variables are variables that apply only to the current shell instance. Each shell such as zsh and bash has its own set of internal shell variables.
 
-**Commands that allow to set and list environmental variables :**
+**Commands that allow to set and list environmental variables:**
 
-- env - To run a program in a modified environment without modifying current one. To list all current environment use single 'env'.
+- env - To run a program in a modified environment without modifying the current one. To list all current environments use single 'env'.
 
-- printenv - print all or part of environment.
+- printenv - print all or part of the environment.
 
-- set - to set an environmental variable and shell.When used without an argument it will print a list of all variables including environment and shell variables, and shell functions.
+- set - to set an environmental variable and shell. When used without an argument it will print a list of all variables including environment and shell variables, and shell functions.
 
 - unset - to unset an environmental variable shell.
 
-- export - to set environmental variable.
+- export - to set an environmental variable.
 
 
 **To display the value of the HOME environment variable**
@@ -90,21 +90,21 @@ $ printenv LANG PWD
 
 **Common environmental variables**
 
-- 	  USER - display current logged in user.
+-       USER - display current logged in user.
 
--     HOME - display home directory of the current user.
+-     HOME - display a home directory of the current user.
 
 -     EDITOR - display default file editor to be used. This is the editor that will be used when you type edit in your terminal.
 
--     SHELL - display path of the current user’s shell, such as bash or zsh.
+-     SHELL - display paths of the current user’s shell, such as bash or zsh.
 
 -     LOGNAME - display name of the current user.
 
--     PATH - display list of directories to be searched when executing commands. When you run a command the system will search those directories in this order and use the first found executable.
+-     PATH - display a list of directories to be searched when executing commands. When you run a command the system will search those directories in this order and use the first found executable.
 
 -     LANG - display current locales settings.
 
--     TERM - displau current terminal emulation.
+-     TERM - display current terminal emulation.
 
 -     MAIL - display location of where the current user’s mail is stored.
 
