@@ -167,9 +167,9 @@ rpcclient  :rpcclient is a utility initially developed to test MS-RPC functional
 
 **After connecting**
 
-
+``
    rpcclient $> enum
-
+``
 
   
   
@@ -177,9 +177,9 @@ you will get multiple commands to execute.
 
 To enumerate users 
 
-
+``
    # rpcclient $> enumdomusers
-
+``
   
 this will tell you all users on the target network
 
@@ -200,7 +200,7 @@ You can even use SNMP to configure router and check its status.
 
 **nmap scripts for snmp enumeration**
 
-~~~
+```
 # ls /usr/share/nmap/scripts | grep snmp
 
   snmp-brute.nse
@@ -226,7 +226,7 @@ You can even use SNMP to configure router and check its status.
   snmp-win32-software.nse
 
   snmp-win32-users.nse
-~~~
+```
 
 **usage :**
 
