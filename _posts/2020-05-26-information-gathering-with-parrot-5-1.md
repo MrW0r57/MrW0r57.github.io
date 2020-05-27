@@ -14,7 +14,7 @@ comments: true
 _**Passive info gathering is the OSINT(open-source intelligence) approach to know about the target.
 In passive info gathering, we gather information from open-source resources like social media network, target partners, their web presence, their infrastructure, financial information and many more.**_
 
-**While performing passive info gathering we need to keep information well organised you can use cherry tree or dradis like tools.**
+**While performing passive info gathering we need to keep information well organized you can use cherry tree or dradis like tools.**
 
 
 **Whois lookup:** Whois provides public database infrastructure-related information. 
@@ -47,13 +47,13 @@ Domain Name: AMAZON.COM
 $ nslookup -h
 
 $nslookup google.com
-Server:		192.168.43.1
-Address:	192.168.43.1#53
+Server:        192.168.43.1
+Address:    192.168.43.1#53
 
 Non-authoritative answer:
-Name:	google.com
+Name:    google.com
 Address: 172.217.166.238
-Name:	google.com
+Name:    google.com
 Address: 2404:6800:4002:804::200e
 ~~~
 **We have also another tool called dig**
@@ -69,7 +69,7 @@ $ dig google.com
 
 ## Google
 
-**Google is a powerful search engine, which provides advance search options and its dorks like below.
+**Google is a powerful search engine, which provides advanced search options and its dorks like below.
 **
 
 - intitle: Use if you want to search for a specific title over the web.( intitle: indexof mp4)
@@ -112,8 +112,8 @@ There are many search engines which also supports dorks and advance search engin
 ## Social Media
 
 
-Social media is also a way to find information about your target, like a number of employees, physical address, events, job posting, requirements, products and more.
-Facebook, Linkedin, Indeed, and other jobs sites are the most useful sites to gather information passively.
+Social media is also a way to find information about your target, like several employees, physical address, events, job posting, requirements, products and more.
+Facebook, Linkedin, Indeed, and other job sites are the most useful sites to gather information passively.
 
 ## theharvestor
 
@@ -134,9 +134,9 @@ Basic usage:
 
 https://shodan.io
 
-Shodan is the world's first search engine for Internet-connected devices. Use Shodan to discover which of your devices are connected to the Internet, where they are located and who is using them. Websites are just one part of the Internet.
+Shodan is the world's first search engine for Internet-connected devices. Use Shodan to discover which of your devices are connected to the Internet, where they are located, and who is using them. Websites are just one part of the Internet.
 
-we can search for webcam, open ports, specific ip, specific web on shodan using shodan dorks.
+we can search for webcam, open ports, specific IP, specific web on shodan using shodan dorks.
 
 Download DEFCON document for shodan to know more, (click here)[https://www.defcon.org/images/defcon-18/dc-18-presentations/Schearer/DEFCON-18-Schearer-SHODAN.pdf]
 
