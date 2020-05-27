@@ -8,9 +8,9 @@ tags:
   - Information gathering
 comments: true
 ---
-## Active approaches of Information gathering 
+## Active approaches to Information gathering 
 
-**It requires direct engagement with target system through scanning ports, protocols and services to learn more about the target system.
+**It requires direct engagement with the target system through scanning ports, protocols, and services to learn more about the target system.
 It helps us to know about what services are running on the target system which helps us to know weaknesses in the target system.**
 
 
@@ -31,7 +31,7 @@ To grab banner of ssh port of target hosts we can use telnet and netcat like bel
 # telnet 10.10.10.189 22
 ~~~
   
-To grab http services banner
+To grab HTTP services banner
 
 ~~~
 # nc 10.10.10.189 80
@@ -44,11 +44,11 @@ To grab http services banner
 
 ## NMAP
 
-Nmap (Network Mapper) is an open source tool for network exploration and security auditing. It was designed to rapidly scan large networks, although it works fine against single hosts. Nmap uses raw IP packets in novel ways to determine what hosts are available on the network, what services (application name and version) those hosts are offering, what operating systems (and OS versions) they are running, what type of packet filters/firewalls are in use, and dozens of other characteristics.
+Nmap (Network Mapper) is an open-source tool for network exploration and security auditing. It was designed to rapidly scan large networks, although it works fine against single hosts. Nmap uses raw IP packets in novel ways to determine what hosts are available on the network, what services (application name and version) those hosts are offering, what operating systems (and OS versions) they are running, what type of packet filters/firewalls are in use, and dozens of other characteristics.
 
 
 
-**I would strongly recomment to read its manual to know about its flags and usage**
+**I would strongly recommend reading its manual to know about its flags and usage**
 
 ~~~  
 # nmap -h
@@ -59,7 +59,7 @@ Nmap (Network Mapper) is an open source tool for network exploration and securit
 
 nmap <scan type> <options> <target>
 
-**Host discovery techniques used by nmap**
+**Host discovery techniques used by Nmap**
 
 - -sL: List Scan - simply list targets to scan
 - -sn: Ping Scan - disable port scan
@@ -112,13 +112,13 @@ we can specify port using -p
 ~~~
 
 
-The Idle scan is a stealth technique that involves the presence of a zombie in the target network. A zombie is an host that is
+The Idle scan is a stealth technique that involves the presence of a zombie in the target network. A zombie is a host that is
 not sending or receiving any packets thus, the reason its called an idle scan.
 
 ~~~
 #nmap -sI nmap.org
 ~~~
-**-A (Aggressive scan options)**: This option enables additional advanced and aggressive options. Presently this enables OS detection (-O), version scanning (-sV), script scanning (-sC) and traceroute (--traceroute).  More features may be added in the future. The point is to enable a comprehensive set of scan options without people having to remember a large set of flags. However, because script scanning with the default set is considered intrusive, you should not use -A against target networks without permission. This option only enables features, and not timing options (such as -T4) or verbosity options (-v) that you might want as well. Options which require privileges (e.g. root access) such as OS detection and traceroute will only be enabled if those privileges are available.
+**-A (Aggressive scan options)**: This option enables additional advanced and aggressive options. Presently this enables OS detection (-O), version scanning (-sV), script scanning (-sC) and traceroute (--traceroute).  More features may be added in the future. The point is to enable a comprehensive set of scan options without people having to remember a large set of flags. However, because script scanning with the default set is considered intrusive, you should not use -A against target networks without permission. This option only enables features, and not timing options (such as -T4) or verbosity options (-v) that you might want as well. Options that require privileges (e.g. root access) such as OS detection and traceroute will only be enabled if those privileges are available.
 
 ~~~
 # nmap -A -sV -p- target.com -Pn -T4
@@ -127,11 +127,11 @@ not sending or receiving any packets thus, the reason its called an idle scan.
 # nmap -A target.com
 ~~~
 
-Run both scan and check the difference
+Run both scans and check the difference
 
-There are also many other scans to use as per your need, i recommend you to read manual using 'man' command to learn more
+There are also many other scans to use as per your need, I recommend you to read manual using 'man' command to learn more
 
-We can also randomly scan host on internet using command below
+We can also randomly scan host on the internet using the command below
 
 **scan random web servers**
 ~~~
@@ -146,8 +146,8 @@ scan all ports of random host
 ~~~
 ## Zenmap
 
-Zenmap is the gui flavour of nmap tool available in parrot and you can install it in windows also.
-Zenmap aims to make Nmap easy for beginners to use while giving experienced Nmap users advanced features. Frequently used scans can be saved as profiles to make them easy to run repeatedly. A command creator allows interactive creation of Nmap command lines. Scan results can be saved and viewed later. Saved scan results can be compared with one another to see how they differ. The results of recent scans are stored in a searchable database.
+Zenmap is the GUI flavor of nmap tool available in parrot and you can install it in windows also.
+Zenmap aims to make Nmap easy for beginners to use while giving experienced Nmap users advanced features. Frequently used scans can be saved as profiles to make them easy to run repeatedly. A command creator allows the interactive creation of Nmap command lines. Scan results can be saved and viewed later. Saved scan results can be compared with one another to see how they differ. The results of recent scans are stored in a searchable database.
 
 **There are many other tools also to actively scan networks** 
 
@@ -157,4 +157,4 @@ Zenmap aims to make Nmap easy for beginners to use while giving experienced Nmap
 
 ## Conclusion
   
-  **Try this approaches on your testing network to gather information.**
+  **Try these approaches on your testing network to gather information.**
