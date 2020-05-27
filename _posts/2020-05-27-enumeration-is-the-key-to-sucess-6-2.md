@@ -42,16 +42,16 @@ nbtscan is a tool used to scan networks for NetBIOS name information.
 
 **usage:**
 
-
- nbtscan -v  <TargetIP>
- 
+~~~
+# nbtscan -v  <TargetIP>
+~~~ 
 
 **In Windows there is also a tool called nbtstat, you can also use it to enumerate.**
 
   
-
- nbtstat -A <target_IP_Address>
-
+~~~
+# nbtstat -A <target_IP_Address>
+~~~
 
 
 **The result will show the name, service, type. Use NetBIOS suffix table to figure out what service they are offering.**
@@ -70,8 +70,9 @@ nbtscan is a tool used to scan networks for NetBIOS name information.
   
 **usage:**
 
- smbclient -L <Target IP>
-
+~~~
+ # smbclient -L <Target IP>
+~~~
   
 
   
@@ -81,7 +82,7 @@ nbtscan is a tool used to scan networks for NetBIOS name information.
 suppose you found some shares like
 
 
-
+```
    Public
   
    IPC$
@@ -91,7 +92,7 @@ suppose you found some shares like
    C$
   
    hacker
-
+```
 
 smbmap -h <TargetIP> to get more detailed information
 
@@ -99,9 +100,9 @@ smbmap -h <TargetIP> to get more detailed information
 Let's interact with IPC$
   
 
-
+~~~
 # smbclient \\\\<targetIP>\\IPC$ -U 
-
+~~~
   
 
 we can use username also with '-U '<Username>' '
@@ -116,32 +117,32 @@ we can use username also with '-U '<Username>' '
 
 **Mount SMB shares using mount in your folder /home/share**
 
-
+~~~
 sudo mount.cifs //<targetIP>/C /home/share/ user=,pass=
-
+~~~
 
 or you can use your windows to interact with smb shares
 
-
+~~~
 C:\> net use \\<TargetIP>\IPC$ "" /u:""
-
+~~~
 
   
   
 **You can also use multiple tools to enumerate NetBIOS**
 
   
-enum4linux
+**enum4linux**
 
+~~~
+# enum4linux -a <TargetIP>
+~~~
 
-enum4linux -a <TargetIP>
+**Wininfo**
 
-
-Wininfo
-
-
-winfo <targetIP> -n
-
+~~~
+# winfo <targetIP> -n
+~~~
 
 **-n** tells the tool to establish a null session before trying to dump the information.
 
@@ -156,9 +157,9 @@ There are other windows gui based tool to enumerated dumpsec, you can install it
 
 rpcclient  :rpcclient is a utility initially developed to test MS-RPC functionality in SMB itself.
 
-
-  rpcclient -N -U "" <targetIP>
-
+~~~
+ # rpcclient -N -U "" <targetIP>
+~~~
 
 -N - Not asking for password
 -U - set username (""for none)
@@ -167,7 +168,7 @@ rpcclient  :rpcclient is a utility initially developed to test MS-RPC functional
 **After connecting**
 
 
-rpcclient $> enum
+   rpcclient $> enum
 
 
   
@@ -177,7 +178,7 @@ you will get multiple commands to execute.
 To enumerate users 
 
 
-rpcclient $> enumdomusers
+   # rpcclient $> enumdomusers
 
   
 this will tell you all users on the target network
@@ -199,8 +200,8 @@ You can even use SNMP to configure router and check its status.
 
 **nmap scripts for snmp enumeration**
 
-
-ls /usr/share/nmap/scripts | grep snmp
+~~~
+# ls /usr/share/nmap/scripts | grep snmp
 
   snmp-brute.nse
 
@@ -225,16 +226,17 @@ ls /usr/share/nmap/scripts | grep snmp
   snmp-win32-software.nse
 
   snmp-win32-users.nse
-
+~~~
 
 **usage :**
 
-
- nmap -A -p <TargetIP> 
-
+~~~
+ # nmap -A -p <TargetIP> 
+~~~
   
+~~~ 
 nmap -p161 --script snmp-info,snmp-interfaces,snmp-netstat,snmp-brute <TargetIP>
-
+~~~
 
 Another tool to enumerate
   
@@ -247,12 +249,13 @@ snmpcheck  is  a  program  that checks the SNMP status of the specified hosts
   
 **usage:**
 
+~~~
+$ man snmpcheck
+~~~
 
-man snmpcheck
-
-  
-snmpcheck -t 192.168.1.X -c public
-
+~~~
+snmpcheck -t <TargetIP> -c public
+~~~
 
   
   
@@ -268,10 +271,12 @@ snmpwalk is an SNMP application that  uses  SNMP  GETNEXT  requests  to query a 
   
 **usage:**
 
+```
  man snmpwalk
-
+```
+```
  snmpwalk -v 2c <TargetIP> -c public
-
+```
   
   
   
