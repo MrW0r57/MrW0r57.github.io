@@ -98,7 +98,7 @@ netdiscover -r targetIP_range
 ## FTP Enumeration
   
 ~~~  
-nmap -A -p21 targetIP
+nmap -A -p21 <targetIP>
 ~~~
 
 **First check anonymous ftp login on server, if ftp anonymous login is enable on server then connect with command below.**
@@ -132,7 +132,7 @@ There are various ftp use them together enumeration scripts in nmap
 
 
 ~~~
-# nmap --script ftp-anon,ftp-bounce,ftp-libopie,ftp-proftpd-backdoor,ftp-vsftpd-backdoor,ftp-vuln-cve2010-4221,tftp-enum -p 21 targetIP
+# nmap --script ftp-anon,ftp-bounce,ftp-libopie,ftp-proftpd-backdoor,ftp-vsftpd-backdoor,ftp-vuln-cve2010-4221,tftp-enum -p 21 <targetIP>
 ~~~
 
 
@@ -142,7 +142,7 @@ There are various ftp use them together enumeration scripts in nmap
 ## SSH Enumeration
 
 ~~~
-nmap -A -p22 targetIP
+nmap -A -p22 <targetIP>
 ~~~
   
 **After finding open ssh port we can enumerate it for ssh users using nmap scripts**
@@ -181,7 +181,7 @@ sshv1.nse
 ## SMTP Enumeration
 
 ~~~
-nmap -A -p25 TargetIP
+nmap -A -p25 <targetIP>
 ~~~
 
 **check nmap scripts to run against target host**
@@ -207,7 +207,7 @@ run all together
 Lets enumerate it
 
 ~~~
-# nmap -p2049 -A target IP
+# nmap -p2049 -A <targetIP>
 ~~~
   
   
@@ -227,13 +227,13 @@ nfs-statfs.nse
 **To find rich result of nfs enumeration**
 
 ~~~
-nmap --script nfs-ls,nfs-showmount,nfs-statfs TargetIP
+nmap --script nfs-ls,nfs-showmount,nfs-statfs <targetIP>
 ~~~
 
 **To interact with publicaly available nfs exports, we can showmount also.**
 
 ~~~
-showmount -e TargetIP
+showmount -e <targetIP>
 
 /home/server/ *
 ~~~
@@ -250,7 +250,7 @@ showmount -e TargetIP
 **Now mount nfs in this directory**
 
 ~~~
-# mount -t nfs NFS_TargetIP:/home/server/export /mnt/home/server -o nolock
+# mount -t nfs <NFS_TargetIP>:/home/server/export /mnt/home/server -o nolock
 ~~~
 
 **And now you're able to navigate server exports in your system just check the  directory you made.**
@@ -267,7 +267,7 @@ showmount -e TargetIP
 
   
 ~~~  
-rpcinfo -p TargetIP
+rpcinfo -p <targetIP>
 ~~~
 
 ## Samba Enumeration
@@ -281,25 +281,25 @@ You can find Samba listening on NetBIOS ports.
 Let's catch Samba
 
 ~~~
-# nmap -A -p135,137,138,139,445 TargetIP --open
+# nmap -A -p135,137,138,139,445 <targetIP> --open
 ~~~
   
 **After that we can enumerate smb shares using smbclient and smbmap tools in Parrot OS**
 
 ~~~
-# smbclient -L TargetIP
+# smbclient -L <targetIP>
 ~~~
 
 **For more detailed information use smbmap**
 
 ~~~
-# smbmap -H TargetIp
+# smbmap -H <targetIP>
 ~~~
 
 **After finding share we can easily interact with using smbclient tool**
 
 ~~~
-# smbclient \\\\targetIP\\sharename
+# smbclient \\\\<targetIP>\\<sharename>
 ~~~
 
 **After succesfully connecting use 'help' command to list navigation commands and try to get more information from those shares.**
@@ -310,7 +310,7 @@ You can also simply your task using [enum4linux](https://github.com/portcullisla
 **usage :**
 
 ~~~
-# enum4linux -a TargetIP
+# enum4linux -a <targetIP>
 ~~~
 
   
@@ -322,11 +322,11 @@ You can also simply your task using [enum4linux](https://github.com/portcullisla
 **Grab SMTP information using telnet and nc on running smtp target server.**
 
 ~~~
-# nc targetIp 25
+# nc <targetIP> 25
 ~~~
-
+OR
 ~~~  
-# telnet targetIP 25
+# telnet <targetIP> 25
 ~~~
   
   
