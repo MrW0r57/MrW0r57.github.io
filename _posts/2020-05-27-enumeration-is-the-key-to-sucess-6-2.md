@@ -284,4 +284,4 @@ snmpwalk is an SNMP application that  uses  SNMP  GETNEXT  requests  to query a 
   
 ## Conclusion
 
-**_There may be many other tools for this purpose, but I have covered useful tools. I recommend please check their manual using 'man <toolname>` command to know all functionalities of these tools._**
+_**There may be many other tools for this purpose, but I have covered useful tools. I recommend please check their manual using 'man toolname' command to know all functionalities of these tools.**_
