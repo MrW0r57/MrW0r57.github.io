@@ -1,7 +1,13 @@
 ---
 layout: post
-published: false
+published: true
 title: Enumeration is the key to sucess 6.2
+tags:
+  - PWP
+  - Intermediate
+  - Enumeration
+comments: true
+
 ---
 ## Windows Approaches
 
