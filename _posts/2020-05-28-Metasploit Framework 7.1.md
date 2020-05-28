@@ -22,41 +22,41 @@ whatis msfvenom
 man msfconsole
 ```
 
-Execute above commands in your Parrot OS Terminal.
+Execute the above commands in your Parrot OS Terminal.
 
 Let's Introduce Metasploit-Framework !!!
 
-**Metasploit-Framework** _is the all purpose open-source pentesting framework with all kind of collection of exploits, shellcodes, fuzzing tools, payloads, encoders etc._
+**Metasploit-Framework** _is the all-purpose open-source pen-testing framework with all kind of collection of exploits, shellcodes, fuzzing tools, payloads, encoders, etc._
 
 Its a complete penetration testing arsenal package.
 
-There is also a paid pro version available for Metasploit-Framework that comes with lot more features.
+There is also a paid pro version available for Metasploit-Framework that comes with a lot more features.
 
 
-Metasploit-framework comes allready installed in Parrot OS, you can run it by 'msfconsole' command using terminal.
+Metasploit-framework comes already installed in Parrot OS, you can run it by 'msfconsole' command using the terminal.
 
-There is also a GUI flavor of Metasploit-framework called 'armitage' which also comes with Parrot OS, you can run it using 'armitage' command in terminal.
+There is also a GUI flavor of Metasploit-framework called 'Armitage' which also comes with Parrot OS, you can run it using 'armitage' command in terminal.
 
 
 **Features of Metasploit-framework**
 
 
-1. Its easy to use.
-2. It comes with over 2014 exploits include 0 days, 1097 auxilaries, 343 post modules, 566 payloads, etc that are updated on regular basis.
-3. Anyone can develop his own exploits,payloads auxilaries and use it with metasploit easily.
-4. Provides good interface between target and user.
-5. It has some shortcuts that are very useful during penetration test.
+1. It's easy to use.
+2. It comes with over 2014 exploits include 0 days, 1097 auxiliaries, 343 post modules, 566 payloads, etc that are updated regularly.
+3. Anyone can develop his exploits, payloads auxiliaries, and use it with metasploit easily.
+4. It provides a good interface between target and user.
+5. It has some shortcuts that are very useful during the penetration test.
 
 
 
 **What you can hack with metasploit-framework?**
 
-Using metaspploit framework you can hack networks, websites, android mobile phones, iOS mobile phone, Linux Systems, Windows System, MAC systems, IOT's and more .
-Its a versatile arsenal in every pentester tool kit.
+Using metaspploit framework you can hack networks, websites, android mobile phones, iOS mobile phones, Linux Systems, Windows System, MAC systems, IOT's, and more.
+It's a versatile arsenal in every pentester tool kit.
 
 **What is msfvenom?**
 
-Msfvenom  is a combination of Msfpayload and Msfencode, putting both of these tools into a single Framework  instance.
+Msfvenom is a combination of Msfpayload and Msfencode, putting both of these tools into a single Framework instance.
 
 **To know about msfvenom**
 
@@ -88,7 +88,7 @@ Almost all of your interaction with Metasploit will be through its many modules,
  
 ```
 
-**They all are organised in seperate directories, you can also check them one by one.**
+**They all are organized in seperate directories, you can also check them one by one.**
 
 
 **Auxiliary**
@@ -125,7 +125,7 @@ Payloads consist of code that runs remotely, while encoders ensure that payloads
 
 **Exploits**
 
-Exploits used payloads to exploit target system and get meterpreter shell.
+Exploits used payloads to exploit the target system and get a meterpreter shell.
 
 ```
 # ls /usr/share/metasploit-framework/modules/exploits/
@@ -138,7 +138,7 @@ Exploits used payloads to exploit target system and get meterpreter shell.
 
 **POST** 
 
-These are post exploitation modules that can quickly gather valuable information about a target, helps to esclate privileges, sensitive data, credentials, etc, easily.
+These are post exploitation modules that can quickly gather valuable information about a target, helps to escalate privileges, sensitive data, credentials, etc, easily.
 
 ```
 #ls /usr/share/metasploit-framework/modules/post
@@ -148,7 +148,7 @@ These are post exploitation modules that can quickly gather valuable information
 
 ```
 
-**lets look in windows directories**
+** let's look in windows directories**
 
 ```
 ls /usr/share/metasploit-framework/modules/post/windows
@@ -186,27 +186,27 @@ ls /usr/share/metasploit-framework/modules/post/windows/gather | head
 
 ```
 
-_We have learnt basic fundamentals of metasploit framework_
+_We have learnt fundamentals of metasploit framework_
 
 **Let's discuss some approaches to use metasploit framework.**
 
-Approaches are mostly same like we perform manual pentesting in our terminal.
+Approaches are mostly the same as we perform manual pentesting in our terminal.
 
-* Scan & Enumerate the target using metasploit auxilary modules.
+* Scan & Enumerate the target using metasploit auxiliary modules.
 
-* Select an exploit based on findings, and based of our target scope.
+* Select an exploit based on findings, and based on our target scope.
 
-* Use payloads in target system to get successfull access to target.
+* Use payloads in the target system to get successful access to the target.
 
-* Encode arbitrary payload/exploit, if target system is running any protection.
+* Encode arbitrary payload/exploit, if the target system is running any protection.
 
-* After successfull access on target system, gather sensitive data. escalate privileges, and delete logs
+* After successfully access on the target system, gather sensitive data. escalate privileges, and delete logs
 
 
 
-**These are some basic fundamentals of Metasploit-Framework**
+**These are some fundamentals of Metasploit-Framework**
 
 
 ## Conclusion
 
-_**I would like to suggest you to read more about metasploit-framework, because it has every thing you want to exploit your target,there is also a free training title as **[Metaspoit-Unleashed](https://www.offensive-security.com/metasploit-unleashed/)** provided by **Offensive Security** that described every thing about Metsaploit-Framework.**_
+_**I would like to suggest you read more about metasploit-framework, because it has everything you want to exploit your target, there is also a free training title as **[Metaspoit-Unleashed](https://www.offensive-security.com/metasploit-unleashed/)** provided by **Offensive Security** that described everything about Metasploit-Framework.**_
