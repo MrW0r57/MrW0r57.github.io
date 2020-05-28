@@ -1,7 +1,12 @@
 ---
 layout: post
-published: false
+published: true
 title: Metasploit Framework 7.2
+tags:
+  - PWP
+  - Intermediate
+  - Metasploit Framework
+comments: true
 ---
 ## Metasploit In Action
 
