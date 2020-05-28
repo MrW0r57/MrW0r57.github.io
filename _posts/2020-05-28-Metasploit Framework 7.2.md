@@ -280,7 +280,7 @@ msf5 > show exploits
 
 **This will list all the exploits in the database, choose any to see the usage.**
 
-For example, I found a WordPress vulnerability in a Unix server, called latform Theme File Upload Vulnerability.
+For example, I found a WordPress vulnerability in a Unix server, called platform Theme File Upload Vulnerability.
 
 ```
 msf5 > use exploit/unix/webapp/wp_platform_exec
