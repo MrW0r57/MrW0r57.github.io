@@ -1,7 +1,12 @@
 ---
 layout: post
-title: ''
-published: false
+published: true
+title: Metasploit Framework 7.1
+tags:
+  - PWP
+  - Intermediate
+  - Metasploit Framework
+comments: true
 ---
 ## Metasploit Fundamentals
 
@@ -103,7 +108,7 @@ bnat	 crawler  example.rb  gather	  scanner  spoof    vsploit
 
 Payloads consist of code that runs remotely, while encoders ensure that payloads make it to their destination intact. Nops keep the payload sizes consistent across exploit attempts.
 
-'''
+```
 # ls /usr/share/metasploit-framework/modules/payloads/
   
   singles  stagers  stages
@@ -116,7 +121,7 @@ Payloads consist of code that runs remotely, while encoders ensure that payloads
   
   aarch64  armle  mipsbe  php  ppc  sparc  tty  x64  x86
 
-'''
+```
 
 **Exploits**
 
@@ -150,7 +155,7 @@ ls /usr/share/metasploit-framework/modules/post/windows
 
  capture  escalate  gather  manage  recon  wlan
 
-``
+```
 **And check some 'post/gather modules' and 'post/escalate' modules **
 
 ```
@@ -171,7 +176,7 @@ ls /usr/share/metasploit-framework/modules/post/windows/gather | head
 ```
 # ls /usr/share/metasploit-framework/modules/post/windows/escalate | head
  
-``` 
+
  droplnk.rb
  getsystem.rb
  golden_ticket.rb
