@@ -1,7 +1,7 @@
 ---
 layout: post
 published: false
-title: ''
+title: Metasploit Framework 7.2
 ---
 ## Metasploit In Action
 
@@ -450,59 +450,3 @@ meterpreter >
 ## Conclusion
 
 _**I have explained basic use cases of metasploit-framework, because its a all in one platform to perform penetration test look also in offsec free [metasploit unleashed training](https://www.offensive-security.com/metasploit-unleashed/).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
