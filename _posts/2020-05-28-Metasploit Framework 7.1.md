@@ -61,12 +61,12 @@ Msfvenom is a combination of Msfpayload and Msfencode, putting both of these too
 **To know about msfvenom**
 
 ```
-man msfvenom
+# man msfvenom
 ```
 To list msfvenom library
 
 ```
-msfvenom -l
+# msfvenom -l
 ```
 
 
