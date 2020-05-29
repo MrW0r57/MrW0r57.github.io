@@ -16,11 +16,11 @@ comments: true
 _**In this blog post we will discuss a penetration testing framework called Metasploit-Framework.**_
 
 
-`
+```
 # whatis msfconsole
 # whatis msfvenom
 # man msfconsole
-`
+```
 
 Execute the above commands in your Parrot OS Terminal.
 
@@ -148,7 +148,7 @@ These are post exploitation modules that can quickly gather valuable information
 
 ```
 
-** let's look in windows directories**
+**let's look in windows directories**
 
 ```
 ls /usr/share/metasploit-framework/modules/post/windows
