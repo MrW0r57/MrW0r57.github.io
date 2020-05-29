@@ -4,7 +4,7 @@ published: true
 title: Metasploit Framework 7.1
 tags:
   - PWP
-  - Intermediate
+  - Beginner
   - Metasploit Framework
 comments: true
 ---
