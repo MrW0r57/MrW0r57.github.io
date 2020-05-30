@@ -1,7 +1,12 @@
 ---
 layout: post
-published: false
-title: Linux Expoitation 9.1
+published: true
+title: Linux Exploitation 9.1
+tags:
+  - PWP
+  - Intermediate
+  - Linux Exploitation
+comments: true
 ---
 ## Approaches to Linux Expoitation
 
@@ -291,7 +296,7 @@ First start from password guessing as its a low hanging fruit.
 ```
 
 
-```
+~~~
 # search tomcat_mgr_login
 
 Matching Modules
@@ -300,7 +305,7 @@ Matching Modules
    #  Name                                     Disclosure Date  Rank    Check  Description
    -  ----                                     ---------------  ----    -----  -----------
    0  auxiliary/scanner/http/tomcat_mgr_login                   normal  No     Tomcat Application Manager Login Utility
-```
+~~~
 
 ```
 msf5 > use auxiliary/scanner/http/tomcat_mgr_login
@@ -331,6 +336,7 @@ We can also use previos techniques.
 
 **Exploit FTP v2.3.4 server using metasplolit**
 
+~~~
 > search vsftpd
 
 Matching Modules
@@ -339,7 +345,7 @@ Matching Modules
    #  Name                                  Disclosure Date  Rank       Check  Description
    -  ----                                  ---------------  ----       -----  -----------
    0  exploit/unix/ftp/vsftpd_234_backdoor  2011-07-03       excellent  No     VSFTPD v2.3.4 Backdoor Command Execution
-```
+~~~
 Use exploit
 
 ```
@@ -389,7 +395,7 @@ python -c 'import pty; pty.spawn("/bin/sh")'
 
 ## Conclusion
 
-In this blogpost we have learnt some basic approaches to exploit target, you can use some of these approaches in windows target also, like lower hanging fruit.
+**_In this blogpost we have learnt some basic approaches to exploit target, you can use some of these approaches in windows target also, like lower hanging fruit._**
 
 
 
