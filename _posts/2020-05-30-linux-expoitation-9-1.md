@@ -13,7 +13,7 @@ comments: true
 
 ## Introduction 
 
-**_In this blog post we will look for various approaches to exploit linux target and get remote access.**_
+**_In this blog post we will look for various approaches to exploit linux target and get remote access._**
 
 
 **After identifying vulnerabilities, now we will exploi them to access target remotely**
