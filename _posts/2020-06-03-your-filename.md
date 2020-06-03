@@ -1,7 +1,7 @@
 ---
 layout: post
 published: false
-title: ''
+title: Windows Post Exploitation 12.2
 ---
 ## Windows Manual Escalation
 
