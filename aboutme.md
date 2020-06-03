@@ -20,7 +20,7 @@ Interests:
 
 ### About me
 
-I am a penetration tester and security enthusiast who always been curious to learn hacking at an early age, I love to share my knowledge with others and this helps me to make my concept better.
+I am a penetration tester and security enthusiast who always been curious to learn hacking at an early age, I love to share my knowledge with others and this helps me to make my concepts better.
 I created this blog to share my knowledge with beginners and enthusiast's so they can learn what I know as its a great thing.
 I have learned from the community, this is the least I can do to help my fellows.
 > **I'm planning to give a lot more to the community in future.**
