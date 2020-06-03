@@ -152,7 +152,9 @@ Zenmap aims to make Nmap easy for beginners to use while giving experienced Nmap
 **There are many other tools also to actively scan networks** 
 
 [Angry IP Scanner](http://angryip.org/) (Linux, Windows, Mac OS X)
+
 [Masscan](https://github.com/robertdavidgraham/masscan) (Linux, Mac OS X, Windows)
+
 [SuperScan](http://www.mcafee.com/us/downloads/free-tools/superscan.aspx) (Windows)
 
 ## Conclusion
