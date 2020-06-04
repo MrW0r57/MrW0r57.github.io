@@ -31,7 +31,7 @@ I have learned from the community, this is the least I can do to help my fellows
 
 You can connect me on following platforms such as Twitter, LinkedIn, Instagram, etc.:
 
-> * _Twitter [@MrW0r57](https://twitter.com/lakshaypandit3)_
+> * _Twitter [@MrW0r57](https://twitter.com/0xl4k)_
 > * _LinkedIn [Lakshay Sharma](https://linkedin.com/in/lakshay-sharma-6a796a189)_
 > * _Instagram [@0xl4k](https://instagram.com/0xl4k)_
 
