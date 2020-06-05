@@ -64,7 +64,9 @@ layout: base
         </li>
         {% endif %}
       </ul>
-      <div id="hyvor-talk-view"></div>
+     
+      {% if page.comments %}
+        <div id="hyvor-talk-view"></div>
 <script type="text/javascript">
     var HYVOR_TALK_WEBSITE = 799; // DO NOT CHANGE THIS
     var HYVOR_TALK_CONFIG = {
@@ -73,17 +75,6 @@ layout: base
     };
 </script>
 <script async type="text/javascript" src="//talk.hyvor.com/web-api/embed"></script>
-      {% if page.comments %}
-        <div class="disqus-comments">
-          {% include disqus.html %}
-        </div>
-          {% include fb-comment.html %}
-        <div class="staticman-comments">
-          {% include staticman-comments.html %}
-        </div>
-        <div class="justcomments-comments">
-          {% include just_comments.html %}
-        </div>
       {% endif %}
     </div>
   </div>
